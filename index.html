@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbyist - Discover a hobby you will enjoy and do it!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <div class="page active" id="home">
+        <div class="container">
+            <img src="assets/logo.svg" alt="Hobbyist" class="logo-img">
+            <p class="tagline">discover a hobby you will enjoy and do it!</p>
+            <button class="cta-btn" onclick="startQuiz()">lets go</button>
+        </div>
+    </div>
+
+    <!-- Quiz Question 1: Indoor vs Outdoor -->
+    <div class="page" id="question1">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <div class="split-container">
+            <div class="split-option purple" onclick="selectAnswer(1, 'indoor')">
+                <h2>Indoors</h2>
+                <p>Do you crave cozy nights inside?</p>
+                <div class="icon icon-indoor">
+                    <svg width="614" height="426" viewBox="0 0 614 426" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_indoor)">
+                        <rect id="indoor-house" x="118.547" y="119.844" width="368.981" height="306.003" rx="14.8185" fill="#FFDA67"/>
+                        <rect x="162.758" width="72.4316" height="118.447" rx="14.8185" fill="#6451FA"/>
+                        <circle id="indoor-smiley" cx="303.142" cy="344.97" r="62.142" fill="#5DCB83"/>
+                        <path id="indoor-eye1" d="M275.398 339.085C280.323 331.698 291.403 332.314 294.481 339.085" stroke="black" stroke-width="5.25144" stroke-linecap="round"/>
+                        <path id="indoor-eye2" d="M311.98 339.085C316.905 331.698 327.985 332.314 331.063 339.085" stroke="black" stroke-width="5.25144" stroke-linecap="round"/>
+                        <path id="indoor-smile" d="M294.652 358.293C297.888 366.985 308.391 366.986 311.282 358.294" stroke="black" stroke-width="5.25144" stroke-linecap="round"/>
+                        <path id="indoor-roof" d="M300.139 15.6943C304.299 13.6235 309.189 13.6235 313.348 15.6943L515.982 116.578C529.992 123.553 525.028 144.662 509.378 144.662H104.11C88.4589 144.662 83.4949 123.553 97.5052 116.578L300.139 15.6943Z" fill="#6451FA"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_indoor">
+                        <rect width="613.487" height="426" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            <div class="split-option blue" onclick="selectAnswer(1, 'outdoor')">
+                <h2>Outdoors</h2>
+                <p>or fresh air and sunshine?</p>
+                <div class="icon icon-outdoor"><img src="assets/outdoor.svg" alt="Outdoor"></div>
+            </div>
+        </div>
+        <div class="both-btn-container" onclick="selectAnswer(1, 'both')">
+            <button class="both-btn">both</button>
+        </div>
+    </div>
+
+    <!-- Quiz Question 2: Maker vs Mover -->
+    <div class="page" id="question2">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <div class="split-container">
+            <div class="split-option purple" onclick="selectAnswer(2, 'maker')">
+                <h2>Maker</h2>
+                <p>Would you rather create something with your hands?</p>
+                <div class="icon icon-maker"><img src="assets/maker.svg" alt="Maker"></div>
+            </div>
+            <div class="split-option yellow" onclick="selectAnswer(2, 'mover')">
+                <h2>Mover</h2>
+                <p>or get your body moving?</p>
+                <div class="icon icon-mover"><img src="assets/mover.svg" alt="Mover"></div>
+            </div>
+        </div>
+        <div class="both-btn-container" onclick="selectAnswer(2, 'both')">
+            <button class="both-btn">both</button>
+        </div>
+    </div>
+
+    <!-- Quiz Question 3: Solo vs Social -->
+    <div class="page" id="question3">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <div class="split-container">
+            <div class="split-option blue" onclick="selectAnswer(3, 'solo')">
+                <h2>Solo</h2>
+                <p>Do you enjoy spending time alone on a project?</p>
+                <div class="icon icon-solo"><img src="assets/solo.svg" alt="Solo"></div>
+            </div>
+            <div class="split-option green" onclick="selectAnswer(3, 'social')">
+                <h2>Social</h2>
+                <p>or do you thrive in a group setting?</p>
+                <div class="icon icon-social"><img src="assets/social.svg" alt="Social"></div>
+            </div>
+        </div>
+        <div class="both-btn-container" onclick="selectAnswer(3, 'both')">
+            <button class="both-btn">both</button>
+        </div>
+    </div>
+
+    <!-- Quiz Question 4: Brainy vs Brawny -->
+    <div class="page" id="question4">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <div class="split-container">
+            <div class="split-option pink" onclick="selectAnswer(4, 'brainy')">
+                <h2>Brainy</h2>
+                <p>Do you prefer activities that challenge your mind?</p>
+                <div class="icon icon-brainy"><img src="assets/brainy.svg" alt="Brainy"></div>
+            </div>
+            <div class="split-option blue" onclick="selectAnswer(4, 'brawny')">
+                <h2>Brawny</h2>
+                <p>or your body?</p>
+                <div class="icon icon-brawny"><img src="assets/brawny.svg" alt="Brawny"></div>
+            </div>
+        </div>
+        <div class="both-btn-container" onclick="selectAnswer(4, 'both')">
+            <button class="both-btn">both</button>
+        </div>
+    </div>
+
+    <!-- Quiz Question 5: Learn vs Relax -->
+    <div class="page" id="question5">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <div class="split-container">
+            <div class="split-option purple" onclick="selectAnswer(5, 'learn')">
+                <h2>Learn</h2>
+                <p>Do you enjoy</p>
+                <div class="icon icon-learn">
+                    <svg width="611" height="299" viewBox="0 0 611 299" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1040_1609)">
+                        <ellipse id="learn-face" cx="471.157" cy="92.1562" rx="76.933" ry="76.9329" transform="rotate(12.8897 471.157 92.1562)" fill="#F786E2"/>
+                        <path id="learn-eye1" d="M439.299 77.3948C447.282 69.8402 460.483 73.643 462.327 82.6647" stroke="black" stroke-width="6.50138" stroke-linecap="round"/>
+                        <path id="learn-eye2" d="M483.451 87.4963C491.434 79.9417 504.635 83.7445 506.48 92.7663" stroke="black" stroke-width="6.50138" stroke-linecap="round"/>
+                        <path id="learn-smile" d="M457.23 105.898C458.735 117.282 471.41 120.182 477.299 110.491" stroke="black" stroke-width="6.50138" stroke-linecap="round"/>
+                        <rect id="learn-book1" y="57" width="47" height="241" rx="12" fill="#9747FF"/>
+                        <rect id="learn-book2" x="125" y="57" width="56" height="241" rx="12" fill="#9747FF"/>
+                        <rect id="learn-book3" x="62" y="83" width="47" height="215" rx="12" fill="#F786E2"/>
+                        <rect id="learn-book4" x="272" y="83" width="47" height="215" rx="12" fill="#5DCB83"/>
+                        <rect x="453" y="275" width="32" height="19" rx="9.5" fill="#6451FA"/>
+                        <rect x="453" y="212" width="32" height="19" rx="9.5" fill="#FFFCF3"/>
+                        <rect x="328" y="212.266" width="38.242" height="166.857" rx="12" transform="rotate(-58.9456 328 212.266)" fill="#6451FA"/>
+                        <rect width="39.5705" height="166.857" rx="12" transform="matrix(0.515851 0.856678 0.856678 -0.515851 447.445 264.438)" fill="#6451FA"/>
+                        <rect id="learn-book5" x="199" y="83" width="56" height="215" rx="12" fill="#6451FA"/>
+                        <rect x="336.57" y="196.734" width="54" height="159.134" rx="12" transform="rotate(-58.9456 336.57 196.734)" fill="#FFFCF3"/>
+                        <rect width="54" height="155.454" rx="12" transform="matrix(0.515851 0.856678 0.856678 -0.515851 441 231.562)" fill="#FFFCF3"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1040_1609">
+                        <rect width="610.8" height="298.337" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            <div class="split-option yellow" onclick="selectAnswer(5, 'relax')">
+                <h2>Relax</h2>
+                <p>or</p>
+                <div class="icon icon-relax"><img src="assets/relax.svg" alt="Relax"></div>
+            </div>
+        </div>
+        <div class="both-btn-container" onclick="selectAnswer(5, 'both')">
+            <button class="both-btn">both</button>
+        </div>
+    </div>
+
+    <!-- Quiz Question 6: Local vs Relax -->
+    <div class="page" id="question6">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <div class="result-container purple">
+            <h2>Think Local</h2>
+            <p>This helps us give you recommendations in your area :-)</p>
+            <p class="subtext">what city do you live in?</p>
+            <input type="text" id="cityInput" placeholder="City, State or Zip Code">
+            <button class="skip-btn" onclick="skipLocation()">Skip ✨</button>
+        </div>
+    </div>
+
+    <!-- Results Page -->
+    <div class="page" id="results">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <div class="results-container">
+            <h1 class="results-title">to do</h1>
+            <h2 class="results-subtitle">results page</h2>
+            <div id="hobbyResults"></div>
+            <div class="both-btn-container" onclick="restartQuiz()">
+                <button class="both-btn">start over</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="inline-svgs.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

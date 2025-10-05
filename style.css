@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    background: #FCD34D;
+}
+
+body {
+    font-family: 'Prompt', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #FCD34D;
+}
+
+.page {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.page.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Home Page */
+#home {
+    background: linear-gradient(135deg, #a8e063, #56ab2f, #ffd89b, #19547b, #e66465, #9198e5);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    color: #5B4EFF;
+}
+
+.logo-img {
+    width: 400px;
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.cta-btn {
+    background: #5B4EFF;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Back Button */
+.back-btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #333;
+    padding: 0.5rem 1rem;
+}
+
+.back-btn:hover {
+    opacity: 0.7;
+}
+
+/* Split Container for Questions */
+.split-container {
+    display: flex;
+    height: 85vh;
+    width: 100%;
+}
+
+.split-option {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    padding: 2rem;
+    color: white;
+}
+
+.split-option:hover {
+    transform: scale(1.02);
+}
+
+.split-option h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.split-option p {
+    font-size: 1.8rem;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.split-option .icon {
+    font-size: 6rem;
+}
+
+.split-option .icon img,
+.split-option .icon svg {
+    width: 280px;
+    height: auto;
+    max-height: 280px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Indoor - Smiley rolls left to right inside house */
+.split-option:hover .icon-indoor #indoor-smiley,
+.split-option:hover .icon-indoor #indoor-eye1,
+.split-option:hover .icon-indoor #indoor-eye2,
+.split-option:hover .icon-indoor #indoor-smile {
+    animation: rollsmiley 2s ease-in-out infinite;
+}
+
+@keyframes rollsmiley {
+    0%, 100% { transform: translateX(-30px); }
+    50% { transform: translateX(30px); }
+}
+
+/* Outdoor - Smiley hikes up mountain, sun rotates */
+.split-option:hover .icon-outdoor #outdoor-smiley,
+.split-option:hover .icon-outdoor #outdoor-eye1,
+.split-option:hover .icon-outdoor #outdoor-eye2,
+.split-option:hover .icon-outdoor #outdoor-smile {
+    animation: hikeup 3s ease-in-out infinite;
+}
+
+.split-option:hover .icon-outdoor #outdoor-sun {
+    animation: sunrotate 4s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes hikeup {
+    0%, 100% { transform: translateY(20px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes sunrotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Maker - Purple block falls, smiley bounces over */
+.split-option:hover .icon-maker #maker-purple {
+    animation: blockfall 0.8s ease-out;
+}
+
+.split-option:hover .icon-maker #maker-smiley,
+.split-option:hover .icon-maker #maker-eye1,
+.split-option:hover .icon-maker #maker-eye2,
+.split-option:hover .icon-maker #maker-smile {
+    animation: smileybounce 0.6s ease-in-out infinite;
+}
+
+@keyframes blockfall {
+    0% { opacity: 0; transform: translateY(-50px) rotate(-90deg); }
+    100% { opacity: 1; transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes smileybounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Mover - Pink and purple smileys move up/down at different times */
+.split-option:hover .icon-mover #mover-smiley1,
+.split-option:hover .icon-mover #mover-eye1-1,
+.split-option:hover .icon-mover #mover-eye1-2,
+.split-option:hover .icon-mover #mover-smile1 {
+    animation: moveup1 0.8s ease-in-out infinite;
+}
+
+.split-option:hover .icon-mover #mover-smiley2,
+.split-option:hover .icon-mover #mover-eye2-1,
+.split-option:hover .icon-mover #mover-eye2-2,
+.split-option:hover .icon-mover #mover-smile2 {
+    animation: moveup2 1s ease-in-out infinite 0.3s;
+}
+
+@keyframes moveup1 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes moveup2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+
+/* Solo - Easel stays, paint brush moves */
+.split-option:hover .icon-solo #solo-paintbrush {
+    animation: paint 1.5s ease-in-out infinite;
+}
+
+@keyframes paint {
+    0%, 100% { transform: translateX(0px); }
+    50% { transform: translateX(15px); }
+}
+
+/* Social - People bounce and confetti flies */
+.split-option:hover .icon-social #social-person1,
+.split-option:hover .icon-social #social-person1-eye1,
+.split-option:hover .icon-social #social-person1-eye2,
+.split-option:hover .icon-social #social-person1-smile {
+    animation: personbounce1 0.6s ease-in-out infinite;
+}
+
+.split-option:hover .icon-social #social-person2,
+.split-option:hover .icon-social #social-person2-eye1,
+.split-option:hover .icon-social #social-person2-eye2,
+.split-option:hover .icon-social #social-person2-smile {
+    animation: personbounce2 0.7s ease-in-out infinite 0.1s;
+}
+
+.split-option:hover .icon-social #social-person3,
+.split-option:hover .icon-social #social-person3-eye1,
+.split-option:hover .icon-social #social-person3-eye2,
+.split-option:hover .icon-social #social-person3-smile {
+    animation: personbounce3 0.8s ease-in-out infinite 0.2s;
+}
+
+.split-option:hover .icon-social #social-person4,
+.split-option:hover .icon-social #social-person4-eye1,
+.split-option:hover .icon-social #social-person4-eye2,
+.split-option:hover .icon-social #social-person4-smile {
+    animation: personbounce4 0.65s ease-in-out infinite 0.15s;
+}
+
+.split-option:hover .icon-social [id^="social-confetti"] {
+    animation: confettipop 1.2s ease-in-out infinite;
+}
+
+@keyframes personbounce1 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes personbounce2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes personbounce3 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes personbounce4 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+}
+
+@keyframes confettipop {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 1; }
+}
+
+/* Brainy - Tic-tac-toe pieces pulse */
+.split-option:hover .icon-brainy #brainy-smiley1 {
+    animation: brainysmileypulse 0.8s ease-in-out infinite;
+}
+
+.split-option:hover .icon-brainy #brainy-smiley2,
+.split-option:hover .icon-brainy #brainy-eye2-1,
+.split-option:hover .icon-brainy #brainy-eye2-2,
+.split-option:hover .icon-brainy #brainy-smile2 {
+    animation: brainybounceright 1s ease-in-out;
+}
+
+@keyframes brainysmileypulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes brainybounceright {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+}
+
+/* Brawny - Dumbbells pump */
+.split-option:hover .icon-brawny #brawny-dumbbell-left,
+.split-option:hover .icon-brawny #brawny-dumbbell-right {
+    animation: pump 0.6s ease-in-out infinite;
+}
+
+.split-option:hover .icon-brawny #brawny-dumbbell-center {
+    animation: pump 0.6s ease-in-out infinite 0.1s;
+}
+
+@keyframes pump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Learn - Smiley face bounces on books */
+.split-option:hover .icon-learn #learn-face,
+.split-option:hover .icon-learn #learn-eye1,
+.split-option:hover .icon-learn #learn-eye2,
+.split-option:hover .icon-learn #learn-smile {
+    animation: facebounce 0.8s ease-out infinite;
+}
+
+.split-option:hover .icon-learn #learn-book1 {
+    animation: bookfall1 0.6s ease-out;
+}
+
+.split-option:hover .icon-learn #learn-book2 {
+    animation: bookfall2 0.8s ease-out;
+}
+
+.split-option:hover .icon-learn #learn-book3 {
+    animation: bookfall3 1s ease-out;
+}
+
+.split-option:hover .icon-learn #learn-book4 {
+    animation: bookfall4 1.2s ease-out;
+}
+
+.split-option:hover .icon-learn #learn-book5 {
+    animation: bookfall5 1.4s ease-out;
+}
+
+@keyframes facebounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes bookfall1 {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bookfall2 {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bookfall3 {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bookfall4 {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bookfall5 {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Relax - Trees stay, hammock swings */
+.split-option:hover .icon-relax #relax-hammock {
+    animation: swing 2s ease-in-out infinite;
+    transform-origin: center top;
+    transform-box: fill-box;
+}
+
+.split-option:hover .icon-relax #relax-smiley,
+.split-option:hover .icon-relax #relax-eye1,
+.split-option:hover .icon-relax #relax-eye2,
+.split-option:hover .icon-relax #relax-smile,
+.split-option:hover .icon-relax #relax-cucumber1-outer,
+.split-option:hover .icon-relax #relax-cucumber1-inner,
+.split-option:hover .icon-relax #relax-cucumber1-center,
+.split-option:hover .icon-relax #relax-cucumber1-sparkle1,
+.split-option:hover .icon-relax #relax-cucumber1-sparkle2,
+.split-option:hover .icon-relax #relax-cucumber1-sparkle3,
+.split-option:hover .icon-relax #relax-cucumber1-sparkle4,
+.split-option:hover .icon-relax #relax-cucumber1-sparkle5,
+.split-option:hover .icon-relax #relax-cucumber2-outer,
+.split-option:hover .icon-relax #relax-cucumber2-inner,
+.split-option:hover .icon-relax #relax-cucumber2-center,
+.split-option:hover .icon-relax #relax-cucumber2-sparkle1,
+.split-option:hover .icon-relax #relax-cucumber2-sparkle2,
+.split-option:hover .icon-relax #relax-cucumber2-sparkle3,
+.split-option:hover .icon-relax #relax-cucumber2-sparkle4,
+.split-option:hover .icon-relax #relax-cucumber2-sparkle5 {
+    animation: swingsmiley 2s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+@keyframes swingsmiley {
+    0%, 100% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+}
+
+/* Selected state animations */
+.split-option.selected .icon-indoor img {
+    animation: shake 0.5s ease;
+}
+
+.split-option.selected .icon-outdoor img {
+    animation: glow 0.5s ease;
+}
+
+.split-option.selected .icon-maker img {
+    animation: spin 0.6s ease;
+}
+
+.split-option.selected .icon-mover img,
+.split-option.selected .icon-brawny img {
+    animation: jump 0.5s ease;
+}
+
+.split-option.selected .icon-solo img {
+    animation: wave 0.6s ease;
+}
+
+.split-option.selected .icon-social img {
+    animation: party 0.6s ease;
+}
+
+.split-option.selected .icon-brainy img {
+    animation: flash 0.5s ease;
+}
+
+.split-option.selected .icon-learn img {
+    animation: drop 0.5s ease;
+}
+
+.split-option.selected .icon-relax img {
+    animation: sway 1s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+@keyframes glow {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.5) drop-shadow(0 0 30px rgba(255, 218, 103, 0.8)); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes jump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); }
+}
+
+@keyframes party {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.2) rotate(-10deg); }
+    75% { transform: scale(1.2) rotate(10deg); }
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+@keyframes drop {
+    0% { transform: translateY(-30px) rotate(-10deg); }
+    60% { transform: translateY(5px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Colors */
+.purple {
+    background: #C4B5FD;
+}
+
+.blue {
+    background: #60A5FA;
+}
+
+.yellow {
+    background: #FCD34D;
+}
+
+.green {
+    background: #6EE7B7;
+}
+
+.pink {
+    background: #F9A8D4;
+}
+
+/* Both Button */
+.both-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: #FCD34D;
+    flex: 1;
+    cursor: pointer;
+}
+
+.both-btn {
+    background: transparent;
+    border: none;
+    color: #5B4EFF;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    pointer-events: none;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.both-btn-container:hover .both-btn {
+    transform: scale(1.1);
+}
+
+/* Location Input Page */
+.result-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+}
+
+.result-container h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.result-container p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    max-width: 400px;
+    text-align: center;
+}
+
+.result-container .subtext {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+#cityInput {
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    margin: 2rem 0;
+    width: 300px;
+    text-align: center;
+}
+
+.skip-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.skip-btn:hover {
+    background: white;
+    color: #5B4EFF;
+}
+
+/* Results Page */
+#results {
+    background: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.results-title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #FF6B6B;
+    margin-bottom: 1rem;
+}
+
+.results-subtitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+#hobbyResults {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.hobby-item {
+    background: white;
+    color: black;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 3rem;
+    }
+
+    .split-option h2 {
+        font-size: 2rem;
+    }
+
+    .split-option p {
+        font-size: 1rem;
+    }
+
+    .results-title {
+        font-size: 2.5rem;
+    }
+}

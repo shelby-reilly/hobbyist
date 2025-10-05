@@ -1,0 +1,24 @@
+<svg width="611" height="299" viewBox="0 0 611 299" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1040_1609)">
+<ellipse id="learn-face" cx="471.157" cy="92.1562" rx="76.933" ry="76.9329" transform="rotate(12.8897 471.157 92.1562)" fill="#F786E2"/>
+<path id="learn-eye1" d="M439.299 77.3948C447.282 69.8402 460.483 73.643 462.327 82.6647" stroke="black" stroke-width="6.50138" stroke-linecap="round"/>
+<path id="learn-eye2" d="M483.451 87.4963C491.434 79.9417 504.635 83.7445 506.48 92.7663" stroke="black" stroke-width="6.50138" stroke-linecap="round"/>
+<path id="learn-smile" d="M457.23 105.898C458.735 117.282 471.41 120.182 477.299 110.491" stroke="black" stroke-width="6.50138" stroke-linecap="round"/>
+<rect id="learn-book1" y="57" width="47" height="241" rx="12" fill="#9747FF"/>
+<rect id="learn-book2" x="125" y="57" width="56" height="241" rx="12" fill="#9747FF"/>
+<rect id="learn-book3" x="62" y="83" width="47" height="215" rx="12" fill="#F786E2"/>
+<rect id="learn-book4" x="272" y="83" width="47" height="215" rx="12" fill="#5DCB83"/>
+<rect x="453" y="275" width="32" height="19" rx="9.5" fill="#6451FA"/>
+<rect x="453" y="212" width="32" height="19" rx="9.5" fill="#FFFCF3"/>
+<rect x="328" y="212.266" width="38.242" height="166.857" rx="12" transform="rotate(-58.9456 328 212.266)" fill="#6451FA"/>
+<rect width="39.5705" height="166.857" rx="12" transform="matrix(0.515851 0.856678 0.856678 -0.515851 447.445 264.438)" fill="#6451FA"/>
+<rect id="learn-book5" x="199" y="83" width="56" height="215" rx="12" fill="#6451FA"/>
+<rect x="336.57" y="196.734" width="54" height="159.134" rx="12" transform="rotate(-58.9456 336.57 196.734)" fill="#FFFCF3"/>
+<rect width="54" height="155.454" rx="12" transform="matrix(0.515851 0.856678 0.856678 -0.515851 441 231.562)" fill="#FFFCF3"/>
+</g>
+<defs>
+<clipPath id="clip0_1040_1609">
+<rect width="610.8" height="298.337" fill="white"/>
+</clipPath>
+</defs>
+</svg>
