@@ -783,26 +783,24 @@ function showResults() {
 
         showPage('hobbyistTypePage');
 
-        // Initialize physics pills after DOM is ready
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                const pillsContainer = document.getElementById('pillsContainer');
-                if (pillsContainer && window.mountPillsPhysics) {
-                    // Explicitly set height to ensure container has dimensions
-                    pillsContainer.style.height = '350px';
+        // Initialize physics pills immediately after page is shown
+        // The container already has explicit height in CSS, so dimensions should be available
+        const pillsContainer = document.getElementById('pillsContainer');
+        if (pillsContainer && window.mountPillsPhysics) {
+            const tags = getTraitTagsData(profile);
 
-                    const tags = getTraitTagsData(profile);
-                    pillsPhysicsInstance = window.mountPillsPhysics(pillsContainer, {
-                        tags: tags,
-                        onTagClick: (id) => console.log('Clicked tag:', id),
-                        gravity: 0.3,
-                        restitution: 0.4,
-                        repelRadius: 150,
-                        repelStrength: 0.008
-                    });
-                }
-            });
-        });
+            // Small delay to ensure the page transition completes
+            setTimeout(() => {
+                pillsPhysicsInstance = window.mountPillsPhysics(pillsContainer, {
+                    tags: tags,
+                    onTagClick: (id) => console.log('Clicked tag:', id),
+                    gravity: 0.3,
+                    restitution: 0.4,
+                    repelRadius: 150,
+                    repelStrength: 0.008
+                });
+            }, 50);
+        }
     } catch (error) {
         console.error('Error in showResults:', error);
         alert('Error loading results: ' + error.message);
