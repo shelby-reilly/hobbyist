@@ -1,0 +1,194 @@
+/* Pills Physics Styles */
+
+.pills-physics-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.type-traits.pills-physics-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    margin-bottom: 3rem;
+}
+
+.pills-physics-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.pills-labels-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.pill-label {
+    position: absolute;
+    pointer-events: auto;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2D3748;
+    will-change: transform;
+    transition: transform 0.2s ease;
+    font-family: 'Prompt', sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 999px;
+}
+
+.pill-label:focus {
+    outline: 2px solid #6451FA;
+    outline-offset: 4px;
+}
+
+.pill-label:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.pill-emoji {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.pill-text {
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.pills-controls {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.pills-control-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pills-control-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pills-control-btn:active {
+    transform: scale(0.95);
+}
+
+.pills-control-btn:focus {
+    outline: 2px solid #6451FA;
+    outline-offset: 2px;
+}
+
+/* Static grid fallback for reduced motion */
+.pills-static-grid {
+    padding: 2rem;
+}
+
+.pill-static {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2D3748;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: 'Prompt', sans-serif;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pill-static:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pill-static:active {
+    transform: scale(0.98);
+}
+
+.pill-static:focus {
+    outline: 2px solid #6451FA;
+    outline-offset: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pills-physics-container {
+        min-height: 250px;
+    }
+
+    .pill-label {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .pills-controls {
+        top: 0.5rem;
+        right: 0.5rem;
+        gap: 0.3rem;
+    }
+
+    .pills-control-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pills-physics-container {
+        min-height: 220px;
+    }
+
+    .pill-label {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .pill-emoji {
+        font-size: 1rem;
+    }
+}
+
+/* Reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+    .pills-physics-container {
+        min-height: auto;
+    }
+
+    .pill-label,
+    .pill-static {
+        transition: none;
+    }
+}
