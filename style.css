@@ -910,6 +910,7 @@ body {
     margin: 0 auto;
     position: relative;
     min-height: 100vh;
+    padding-bottom: 4rem;
 }
 
 .hobby-page-header {
