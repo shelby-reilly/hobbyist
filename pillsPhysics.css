@@ -145,7 +145,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .pills-physics-container {
-        min-height: 250px;
+        height: 300px;
     }
 
     .pill-label {
@@ -168,7 +168,7 @@
 
 @media (max-width: 480px) {
     .pills-physics-container {
-        min-height: 220px;
+        height: 280px;
     }
 
     .pill-label {

@@ -1821,7 +1821,7 @@ body {
 
     /* Pills physics mobile adjustments */
     .type-traits.pills-physics-container {
-        height: 250px;
+        height: 300px !important;
         max-width: 100%;
     }
 
@@ -2024,7 +2024,7 @@ body {
     }
 
     .type-traits.pills-physics-container {
-        height: 220px;
+        height: 280px !important;
     }
 
     .continue-btn {

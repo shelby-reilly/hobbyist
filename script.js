@@ -789,8 +789,18 @@ function showResults() {
         if (pillsContainer && window.mountPillsPhysics) {
             const tags = getTraitTagsData(profile);
 
-            // Small delay to ensure the page transition completes
+            // Longer delay for mobile to ensure layout is complete
+            const isMobile = window.innerWidth <= 768;
+            const delay = isMobile ? 300 : 100;
+
             setTimeout(() => {
+                console.log('Mounting pills physics...', {
+                    containerWidth: pillsContainer.offsetWidth,
+                    containerHeight: pillsContainer.offsetHeight,
+                    tagCount: tags.length,
+                    isMobile: isMobile
+                });
+
                 pillsPhysicsInstance = window.mountPillsPhysics(pillsContainer, {
                     tags: tags,
                     onTagClick: (id) => console.log('Clicked tag:', id),
@@ -799,7 +809,7 @@ function showResults() {
                     repelRadius: 150,
                     repelStrength: 0.008
                 });
-            }, 50);
+            }, delay);
         }
     } catch (error) {
         console.error('Error in showResults:', error);
