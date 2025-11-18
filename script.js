@@ -14,9 +14,6 @@ let history = ['home'];
 // Smiley stamp functionality
 let stampMode = false;
 
-// Store physics pills instance
-let pillsPhysicsInstance = null;
-
 function initSmileyStamp() {
     const smileyClickable = document.getElementById('smiley-clickable');
     const homePage = document.getElementById('home');
@@ -746,12 +743,6 @@ function skipLocation() {
 
 function showResults() {
     try {
-        // Clean up previous physics instance
-        if (pillsPhysicsInstance) {
-            pillsPhysicsInstance.destroy();
-            pillsPhysicsInstance = null;
-        }
-
         // Generate hobby profile based on answers
         const profile = generateProfile();
         const archetype = archetypes[profile];
@@ -763,6 +754,15 @@ function showResults() {
 
         // Display Hobbyist Type Page (Page 1)
         const typeContent = document.getElementById('hobbyistTypeContent');
+        // Generate trait tags data
+        const tags = getTraitTagsData(profile);
+        const pillsHTML = tags.map(tag => `
+            <div class="simple-pill" style="background-color: ${tag.bg}">
+                <span class="simple-pill-emoji">${tag.emoji}</span>
+                <span class="simple-pill-text">${tag.label}</span>
+            </div>
+        `).join('');
+
         typeContent.innerHTML = `
             <div class="type-page-header">
                 <h2 class="type-intro">Your Hobbyist type is</h2>
@@ -775,42 +775,15 @@ function showResults() {
                 </svg>
             </div>
             <p class="type-description">${archetype.description}</p>
-            <div class="type-traits pills-physics-container" id="pillsContainer"></div>
+            <div class="type-traits simple-pills-container">
+                ${pillsHTML}
+            </div>
             <button class="continue-btn" onclick="showHobbyPage()">
                 Ready for your new hobby? →
             </button>
         `;
 
         showPage('hobbyistTypePage');
-
-        // Initialize physics pills immediately after page is shown
-        // The container already has explicit height in CSS, so dimensions should be available
-        const pillsContainer = document.getElementById('pillsContainer');
-        if (pillsContainer && window.mountPillsPhysics) {
-            const tags = getTraitTagsData(profile);
-
-            // Longer delay for mobile to ensure layout is complete
-            const isMobile = window.innerWidth <= 768;
-            const delay = isMobile ? 300 : 100;
-
-            setTimeout(() => {
-                console.log('Mounting pills physics...', {
-                    containerWidth: pillsContainer.offsetWidth,
-                    containerHeight: pillsContainer.offsetHeight,
-                    tagCount: tags.length,
-                    isMobile: isMobile
-                });
-
-                pillsPhysicsInstance = window.mountPillsPhysics(pillsContainer, {
-                    tags: tags,
-                    onTagClick: (id) => console.log('Clicked tag:', id),
-                    gravity: 0.3,
-                    restitution: 0.4,
-                    repelRadius: 150,
-                    repelStrength: 0.008
-                });
-            }, delay);
-        }
     } catch (error) {
         console.error('Error in showResults:', error);
         alert('Error loading results: ' + error.message);

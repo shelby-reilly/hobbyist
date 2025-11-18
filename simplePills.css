@@ -1,0 +1,157 @@
+/* Simple Interactive Pills - Reliable for all devices */
+
+.simple-pills-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    min-height: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    margin-bottom: 3rem;
+}
+
+.simple-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2D3748;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: 'Prompt', sans-serif;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    animation: pillFloatIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+    position: relative;
+}
+
+/* Stagger the entrance animations */
+.simple-pill:nth-child(1) { animation-delay: 0.1s; }
+.simple-pill:nth-child(2) { animation-delay: 0.2s; }
+.simple-pill:nth-child(3) { animation-delay: 0.3s; }
+.simple-pill:nth-child(4) { animation-delay: 0.4s; }
+.simple-pill:nth-child(5) { animation-delay: 0.5s; }
+.simple-pill:nth-child(6) { animation-delay: 0.6s; }
+.simple-pill:nth-child(7) { animation-delay: 0.7s; }
+.simple-pill:nth-child(8) { animation-delay: 0.8s; }
+
+.simple-pill-emoji {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.simple-pill-text {
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Hover effects */
+.simple-pill:hover {
+    transform: scale(1.15) rotate(2deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.simple-pill:active {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtle floating animation */
+@media (hover: hover) {
+    .simple-pill {
+        animation: pillFloatIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards,
+                   pillFloat 3s ease-in-out infinite;
+    }
+
+    .simple-pill:nth-child(1) { animation-delay: 0.1s, 0s; }
+    .simple-pill:nth-child(2) { animation-delay: 0.2s, 0.5s; }
+    .simple-pill:nth-child(3) { animation-delay: 0.3s, 1s; }
+    .simple-pill:nth-child(4) { animation-delay: 0.4s, 1.5s; }
+    .simple-pill:nth-child(5) { animation-delay: 0.5s, 2s; }
+    .simple-pill:nth-child(6) { animation-delay: 0.6s, 2.5s; }
+    .simple-pill:nth-child(7) { animation-delay: 0.7s, 0.3s; }
+    .simple-pill:nth-child(8) { animation-delay: 0.8s, 0.8s; }
+}
+
+/* Touch devices - gentle wobble on tap */
+@media (hover: none) and (pointer: coarse) {
+    .simple-pill:active {
+        animation: pillWobble 0.4s ease;
+    }
+}
+
+/* Animations */
+@keyframes pillFloatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.8) rotate(-10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+}
+
+@keyframes pillFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pillWobble {
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(-3deg) scale(1.1);
+    }
+    75% {
+        transform: rotate(3deg) scale(1.1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .simple-pills-container {
+        min-height: 250px;
+        padding: 1.5rem 0.5rem;
+        gap: 0.7rem;
+    }
+
+    .simple-pill {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.95rem;
+    }
+
+    .simple-pill-emoji {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .simple-pills-container {
+        min-height: 220px;
+        gap: 0.6rem;
+    }
+
+    .simple-pill {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .simple-pill-emoji {
+        font-size: 1rem;
+    }
+}

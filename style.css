@@ -1049,8 +1049,8 @@ body {
 }
 
 .continue-btn {
-    background: white;
-    color: #6451FA;
+    background: #6451FA;
+    color: white;
     border: none;
     padding: 1.2rem 2.5rem;
     font-size: 1.2rem;
@@ -1066,15 +1066,11 @@ body {
 }
 
 .continue-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    background: #FFD966;
-    color: #2D3748;
+    transform: scale(1.05);
 }
 
 .continue-btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transform: scale(0.98);
 }
 
 /* Hobby Results Page */
@@ -1281,8 +1277,8 @@ body {
 }
 
 .restart-btn-bottom {
-    background: white;
-    color: #6451FA;
+    background: #6451FA;
+    color: white;
     border: none;
     padding: 1.2rem 2.5rem;
     font-size: 1.1rem;
@@ -1299,14 +1295,11 @@ body {
 }
 
 .restart-btn-bottom:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    background: #FFD966;
-    color: #2D3748;
+    transform: scale(1.05);
 }
 
 .restart-btn-bottom:active {
-    transform: translateY(-1px);
+    transform: scale(0.98);
 }
 
 /* Type Reveal Section - OLD */
@@ -1959,9 +1952,8 @@ body {
         margin-top: 5rem;
     }
 
-    /* Pills physics mobile adjustments */
-    .type-traits.pills-physics-container {
-        height: 300px !important;
+    /* Simple pills mobile adjustments */
+    .type-traits.simple-pills-container {
         max-width: 100%;
     }
 
@@ -2163,8 +2155,8 @@ body {
         margin-top: 4rem;
     }
 
-    .type-traits.pills-physics-container {
-        height: 280px !important;
+    .type-traits.simple-pills-container {
+        min-height: 220px;
     }
 
     .continue-btn {
