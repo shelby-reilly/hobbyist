@@ -252,6 +252,16 @@ body {
     animation: rollsmiley 2s ease-in-out infinite;
 }
 
+/* Auto-play on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .icon-indoor #indoor-smiley,
+    .icon-indoor #indoor-eye1,
+    .icon-indoor #indoor-eye2,
+    .icon-indoor #indoor-smile {
+        animation: rollsmiley 2s ease-in-out infinite;
+    }
+}
+
 @keyframes rollsmiley {
     0%, 100% { transform: translateX(-30px); }
     50% { transform: translateX(30px); }
@@ -269,6 +279,22 @@ body {
     animation: sunrotate 4s linear infinite;
     transform-origin: center;
     transform-box: fill-box;
+}
+
+/* Auto-play on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .icon-outdoor #outdoor-smiley,
+    .icon-outdoor #outdoor-eye1,
+    .icon-outdoor #outdoor-eye2,
+    .icon-outdoor #outdoor-smile {
+        animation: hikeup 3s ease-in-out infinite;
+    }
+
+    .icon-outdoor #outdoor-sun {
+        animation: sunrotate 4s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
 }
 
 @keyframes hikeup {
@@ -291,6 +317,16 @@ body {
 .split-option:hover .icon-maker #maker-eye2,
 .split-option:hover .icon-maker #maker-smile {
     animation: smileybounce 0.6s ease-in-out infinite;
+}
+
+/* Auto-play on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .icon-maker #maker-smiley,
+    .icon-maker #maker-eye1,
+    .icon-maker #maker-eye2,
+    .icon-maker #maker-smile {
+        animation: smileybounce 0.6s ease-in-out infinite;
+    }
 }
 
 @keyframes blockfall {
@@ -318,6 +354,23 @@ body {
     animation: moveup2 1s ease-in-out infinite 0.3s;
 }
 
+/* Auto-play on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .icon-mover #mover-smiley1,
+    .icon-mover #mover-eye1-1,
+    .icon-mover #mover-eye1-2,
+    .icon-mover #mover-smile1 {
+        animation: moveup1 0.8s ease-in-out infinite;
+    }
+
+    .icon-mover #mover-smiley2,
+    .icon-mover #mover-eye2-1,
+    .icon-mover #mover-eye2-2,
+    .icon-mover #mover-smile2 {
+        animation: moveup2 1s ease-in-out infinite 0.3s;
+    }
+}
+
 @keyframes moveup1 {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
@@ -331,6 +384,13 @@ body {
 /* Solo - Easel stays, paint brush moves */
 .split-option:hover .icon-solo #solo-paintbrush {
     animation: paint 1.5s ease-in-out infinite;
+}
+
+/* Auto-play on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .icon-solo #solo-paintbrush {
+        animation: paint 1.5s ease-in-out infinite;
+    }
 }
 
 @keyframes paint {
@@ -369,6 +429,41 @@ body {
 
 .split-option:hover .icon-social [id^="social-confetti"] {
     animation: confettipop 1.2s ease-in-out infinite;
+}
+
+/* Auto-play on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .icon-social #social-person1,
+    .icon-social #social-person1-eye1,
+    .icon-social #social-person1-eye2,
+    .icon-social #social-person1-smile {
+        animation: personbounce1 0.6s ease-in-out infinite;
+    }
+
+    .icon-social #social-person2,
+    .icon-social #social-person2-eye1,
+    .icon-social #social-person2-eye2,
+    .icon-social #social-person2-smile {
+        animation: personbounce2 0.7s ease-in-out infinite 0.1s;
+    }
+
+    .icon-social #social-person3,
+    .icon-social #social-person3-eye1,
+    .icon-social #social-person3-eye2,
+    .icon-social #social-person3-smile {
+        animation: personbounce3 0.8s ease-in-out infinite 0.2s;
+    }
+
+    .icon-social #social-person4,
+    .icon-social #social-person4-eye1,
+    .icon-social #social-person4-eye2,
+    .icon-social #social-person4-smile {
+        animation: personbounce4 0.65s ease-in-out infinite 0.15s;
+    }
+
+    .icon-social [id^="social-confetti"] {
+        animation: confettipop 1.2s ease-in-out infinite;
+    }
 }
 
 @keyframes personbounce1 {
@@ -415,6 +510,16 @@ body {
     animation: brainyrollin 1s ease-out forwards;
 }
 
+/* Auto-play on mobile/touch devices - delayed start */
+@media (hover: none) and (pointer: coarse) {
+    .icon-brainy #brainy-smiley2,
+    .icon-brainy #brainy-eye2-1,
+    .icon-brainy #brainy-eye2-2,
+    .icon-brainy #brainy-smile2 {
+        animation: brainyrollin 1s ease-out 0.5s forwards;
+    }
+}
+
 @keyframes brainyrollin {
     0% {
         opacity: 0;
@@ -437,6 +542,18 @@ body {
 
 .split-option:hover .icon-brawny #brawny-dumbbell-center {
     animation: pump 0.6s ease-in-out infinite 0.1s;
+}
+
+/* Auto-play on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .icon-brawny #brawny-dumbbell-left,
+    .icon-brawny #brawny-dumbbell-right {
+        animation: pump 0.6s ease-in-out infinite;
+    }
+
+    .icon-brawny #brawny-dumbbell-center {
+        animation: pump 0.6s ease-in-out infinite 0.1s;
+    }
 }
 
 @keyframes pump {
@@ -470,6 +587,16 @@ body {
 
 .split-option:hover .icon-learn #learn-book5 {
     animation: bookfall5 1.4s ease-out;
+}
+
+/* Auto-play on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .icon-learn #learn-face,
+    .icon-learn #learn-eye1,
+    .icon-learn #learn-eye2,
+    .icon-learn #learn-smile {
+        animation: facebounce 0.8s ease-out infinite;
+    }
 }
 
 @keyframes facebounce {
@@ -511,6 +638,19 @@ body {
 
 .split-option:hover .icon-relax #relax-smiley-group {
     animation: swingsmiley 2s ease-in-out infinite;
+}
+
+/* Auto-play on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .icon-relax #relax-hammock {
+        animation: swing 2s ease-in-out infinite;
+        transform-origin: center top;
+        transform-box: fill-box;
+    }
+
+    .icon-relax #relax-smiley-group {
+        animation: swingsmiley 2s ease-in-out infinite;
+    }
 }
 
 @keyframes swing {
