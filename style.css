@@ -19,6 +19,9 @@ body {
     margin: 0;
     padding: 0;
     background: #FCD34D;
+    /* Safe area support for notched devices */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 .page {
@@ -145,27 +148,40 @@ body {
     transition: transform 0.2s;
     font-family: 'Prompt', sans-serif;
     text-transform: capitalize;
+    min-height: 44px;
+    min-width: 44px;
 }
 
 .cta-btn:hover {
     transform: scale(1.05);
 }
 
+.cta-btn:active {
+    transform: scale(0.98);
+}
+
 /* Back Button */
 .back-btn {
     position: absolute;
-    top: 2rem;
-    left: 2rem;
+    top: max(2rem, env(safe-area-inset-top));
+    left: max(2rem, env(safe-area-inset-left));
     background: none;
     border: none;
     font-size: 1rem;
     cursor: pointer;
     color: #333;
     padding: 0.5rem 1rem;
+    min-height: 44px;
+    min-width: 44px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .back-btn:hover {
     opacity: 0.7;
+}
+
+.back-btn:active {
+    opacity: 0.5;
 }
 
 /* Split Container for Questions */
@@ -185,10 +201,15 @@ body {
     transition: transform 0.3s;
     padding: 4rem 2rem;
     color: white;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .split-option:hover {
     transform: scale(1.02);
+}
+
+.split-option:active {
+    transform: scale(0.98);
 }
 
 .split-option h2 {
@@ -639,10 +660,15 @@ body {
     padding: 0.5rem 2rem;
     pointer-events: none;
     transition: transform 0.3s ease, font-size 0.3s ease;
+    min-height: 44px;
 }
 
 .both-btn-container:hover .both-btn {
     transform: scale(1.1);
+}
+
+.both-btn-container:active .both-btn {
+    transform: scale(0.95);
 }
 
 /* Location Input Page */
@@ -709,16 +735,22 @@ body {
     background: transparent;
     border: none;
     color: #FCD34D;
-    padding: 0;
+    padding: 0.5rem 0;
     font-size: 1.2rem;
     font-weight: 400;
     cursor: pointer;
     text-align: left;
     width: fit-content;
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .skip-btn:hover {
     opacity: 0.8;
+}
+
+.skip-btn:active {
+    opacity: 0.6;
 }
 
 .local-right {
@@ -889,6 +921,8 @@ body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     font-family: 'Prompt', sans-serif;
     animation: fadeInUp 0.8s ease-out 1.3s backwards;
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .continue-btn:hover {
@@ -896,6 +930,11 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     background: #FFD966;
     color: #2D3748;
+}
+
+.continue-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Hobby Results Page */
@@ -987,11 +1026,19 @@ body {
     gap: 0.6rem;
     transition: all 0.3s ease;
     font-weight: 500;
+    padding: 0.5rem 0;
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .resource-link:hover {
     color: #FFD966;
     transform: translateX(5px);
+}
+
+.resource-link:active {
+    color: #FFD966;
+    opacity: 0.8;
 }
 
 .hobby-emojis {
@@ -1061,12 +1108,19 @@ body {
     cursor: pointer;
     border: 2px solid transparent;
     animation: slideInLeft 0.5s ease-out backwards;
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .other-hobby-item:hover {
     background: rgba(255, 255, 255, 0.25);
     border-color: #FFD966;
     transform: translateX(8px);
+}
+
+.other-hobby-item:active {
+    transform: translateX(4px);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .hobby-item-name {
@@ -1100,6 +1154,8 @@ body {
     font-family: 'Prompt', sans-serif;
     display: block;
     margin: 0 auto 3rem auto;
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .restart-btn-bottom:hover {
@@ -1107,6 +1163,10 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     background: #FFD966;
     color: #2D3748;
+}
+
+.restart-btn-bottom:active {
+    transform: translateY(-1px);
 }
 
 /* Type Reveal Section - OLD */
@@ -1615,47 +1675,148 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .logo {
-        font-size: 3rem;
+    /* Home page mobile */
+    .logo-img {
+        width: 90%;
+        max-width: 500px;
+        margin-bottom: 1rem;
     }
 
+    .tagline {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .cta-btn {
+        padding: 1rem 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    /* Split container mobile fixes */
     .split-container {
         flex-direction: column;
         height: auto;
-        min-height: 100vh;
+        min-height: 75vh;
     }
 
     .split-option {
-        padding: 3rem 2rem;
-        min-height: 33vh;
+        padding: 2.5rem 1.5rem;
+        min-height: 30vh;
     }
 
     .split-option h2 {
-        font-size: 3.5rem;
+        font-size: 3rem;
         margin-bottom: 0.5rem;
     }
 
     .split-option p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        max-width: 300px;
     }
 
     .split-option .icon img,
     .split-option .icon svg {
-        width: 200px;
-        max-height: 200px;
+        width: 180px;
+        max-height: 180px;
     }
 
+    /* Both button - make it more visible */
     .both-btn-container {
-        min-height: 15vh;
+        min-height: 12vh;
+        padding: 1.5rem;
     }
 
-    .both-text {
-        font-size: 3rem;
+    .both-btn {
+        font-size: 1.3rem;
+        padding: 0.8rem 2rem;
     }
 
-    .results-title {
-        font-size: 2.5rem;
+    /* Back button */
+    .back-btn {
+        top: 1rem;
+        left: 1rem;
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Think Local page mobile */
+    .local-container {
+        flex-direction: column;
+    }
+
+    .local-left {
+        padding: 2rem 1.5rem;
+        min-height: 50vh;
+    }
+
+    .local-title {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .local-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .local-question {
+        font-size: 1.2rem;
+    }
+
+    #cityInput {
+        width: 100%;
+        max-width: 350px;
+        font-size: 1rem;
+    }
+
+    .local-right {
+        min-height: 40vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .local-illustration {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    /* Hobbyist Type page mobile */
+    #hobbyistTypePage {
+        padding: 2rem 1.5rem;
+    }
+
+    .type-page-container {
+        max-width: 100%;
+    }
+
+    .type-intro {
+        font-size: 1.5rem;
+    }
+
+    .type-name {
+        font-size: 3.5rem !important;
+        margin-bottom: 1.5rem;
+    }
+
+    .type-smiley {
+        top: 8rem;
+        left: 1.5rem;
+        width: 80px;
+        height: 80px;
+    }
+
+    .type-smiley img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .type-description {
+        font-size: 1.1rem;
+        margin-top: 5rem;
     }
 
     /* Pills physics mobile adjustments */
@@ -1664,23 +1825,284 @@ body {
         max-width: 100%;
     }
 
-    .type-name {
-        font-size: 3.5rem !important;
-    }
-
-    .type-intro {
-        font-size: 1.5rem;
-    }
-
-    .type-description {
+    .continue-btn {
+        padding: 1rem 2rem;
         font-size: 1.1rem;
     }
 
-    .hobby-name {
-        font-size: 4rem !important;
+    /* Hobby Results page mobile */
+    #hobbyResultsPage {
+        padding: 2rem 1.5rem;
+    }
+
+    .hobby-page-container {
+        max-width: 100%;
+        padding-bottom: 2rem;
     }
 
     .hobby-intro {
         font-size: 1.8rem !important;
+    }
+
+    .hobby-name {
+        font-size: 4rem !important;
+        margin-bottom: 2rem;
+    }
+
+    .hobby-icon-circle {
+        position: static;
+        margin: 1rem auto 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hobby-smiley-accent {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hobby-description {
+        font-size: 1.15rem;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+    }
+
+    .hobby-emojis {
+        position: static;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    .hobby-emoji {
+        position: static;
+        font-size: 4rem;
+    }
+
+    .hobby-emoji-1,
+    .hobby-emoji-2 {
+        top: auto;
+        right: auto;
+    }
+
+    .resources-title {
+        font-size: 0.9rem;
+    }
+
+    .resource-link {
+        font-size: 1.1rem;
+    }
+
+    .other-hobbies-section {
+        margin-top: 4rem;
+    }
+
+    .other-hobbies-title {
+        font-size: 1.3rem;
+    }
+
+    .hobby-item-name {
+        font-size: 1rem;
+    }
+
+    .restart-btn-bottom {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    /* Home page */
+    .logo-img {
+        width: 95%;
+        max-width: 350px;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-btn {
+        padding: 0.9rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    /* Split options */
+    .split-option {
+        padding: 2rem 1rem;
+        min-height: 28vh;
+    }
+
+    .split-option h2 {
+        font-size: 2.5rem;
+    }
+
+    .split-option p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .split-option .icon img,
+    .split-option .icon svg {
+        width: 150px;
+        max-height: 150px;
+    }
+
+    .both-btn-container {
+        min-height: 10vh;
+        padding: 1rem;
+    }
+
+    .both-btn {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    /* Think Local */
+    .local-left {
+        padding: 1.5rem 1rem;
+    }
+
+    .local-title {
+        font-size: 2.8rem;
+    }
+
+    .local-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .local-question {
+        font-size: 1.1rem;
+    }
+
+    #cityInput {
+        font-size: 0.95rem;
+        padding: 0.9rem 1.2rem;
+    }
+
+    .skip-btn {
+        font-size: 1.1rem;
+    }
+
+    .local-illustration {
+        width: 95%;
+        max-width: 400px;
+    }
+
+    /* Hobbyist Type page */
+    #hobbyistTypePage {
+        padding: 1.5rem 1rem;
+    }
+
+    .type-intro {
+        font-size: 1.3rem;
+    }
+
+    .type-name {
+        font-size: 2.8rem !important;
+    }
+
+    .type-smiley {
+        top: 7rem;
+        left: 1rem;
+        width: 60px;
+        height: 60px;
+    }
+
+    .type-smiley img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .type-description {
+        font-size: 1rem;
+        margin-top: 4rem;
+    }
+
+    .type-traits.pills-physics-container {
+        height: 220px;
+    }
+
+    .continue-btn {
+        padding: 0.9rem 1.8rem;
+        font-size: 1rem;
+    }
+
+    /* Hobby Results page */
+    #hobbyResultsPage {
+        padding: 1.5rem 1rem;
+    }
+
+    .hobby-intro {
+        font-size: 1.5rem !important;
+    }
+
+    .hobby-name {
+        font-size: 3rem !important;
+    }
+
+    .hobby-smiley-accent {
+        width: 80px;
+        height: 80px;
+    }
+
+    .hobby-description {
+        font-size: 1.05rem;
+    }
+
+    .hobby-emoji {
+        font-size: 3rem;
+    }
+
+    .resources-title {
+        font-size: 0.85rem;
+    }
+
+    .resource-link {
+        font-size: 1rem;
+    }
+
+    .other-hobbies-title {
+        font-size: 1.2rem;
+    }
+
+    .hobby-item-name {
+        font-size: 0.95rem;
+    }
+
+    .other-hobby-item {
+        padding: 1rem 1.2rem;
+    }
+
+    .restart-btn-bottom {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .split-option {
+        min-height: 40vh;
+    }
+
+    .both-btn-container {
+        min-height: 15vh;
+    }
+
+    .local-container {
+        min-height: 100vh;
+    }
+
+    .local-left {
+        min-height: 60vh;
+    }
+
+    .local-right {
+        min-height: 50vh;
     }
 }
