@@ -899,23 +899,38 @@ function getTraitTagsData(profile) {
     return tags;
 }
 
+// Format hobby name with smiley in O or after the name
+function formatHobbyNameWithSmiley(name) {
+    const upperName = name.toUpperCase();
+    const smileyPink = `<span class="smiley-in-text"><svg width="0.85em" height="0.85em" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="58" fill="#F786E2"/>
+        <path d="M40 54C43.5 47 53 47.5 56 54" stroke="#2D3748" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M64 54C67.5 47 77 47.5 80 54" stroke="#2D3748" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M55 70C57 77 63 77 65 70" stroke="#2D3748" stroke-width="4.5" stroke-linecap="round"/>
+    </svg></span>`;
+
+    // Check if name contains O
+    if (upperName.includes('O')) {
+        // Replace first O with smiley
+        const firstOIndex = upperName.indexOf('O');
+        return upperName.substring(0, firstOIndex) + smileyPink + upperName.substring(firstOIndex + 1);
+    } else {
+        // Add smiley after the name
+        return upperName + ' ' + smileyPink;
+    }
+}
+
 function showHobbyPage() {
     const profile = generateProfile();
     const hobbyData = hobbies[profile];
 
     const hobbyContent = document.getElementById('hobbyContent');
+    const formattedName = formatHobbyNameWithSmiley(hobbyData.primary.name);
+
     hobbyContent.innerHTML = `
         <div class="hobby-page-header">
             <h2 class="hobby-intro">Say hello to your new hobby:</h2>
-            <h1 class="hobby-name">${hobbyData.primary.name.toUpperCase()}</h1>
-            <div class="hobby-icon-circle">
-                <svg class="hobby-smiley-accent" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="40" cy="40" r="38" fill="#F786E2"/>
-                    <path d="M27 36C29.5 31 35 31.3 37 36" stroke="#6451FA" stroke-width="3.5" stroke-linecap="round"/>
-                    <path d="M43 36C45.5 31 51 31.3 53 36" stroke="#6451FA" stroke-width="3.5" stroke-linecap="round"/>
-                    <path d="M36 47C37.5 52 42.5 52 44 47" stroke="#6451FA" stroke-width="3.5" stroke-linecap="round"/>
-                </svg>
-            </div>
+            <h1 class="hobby-name">${formattedName}</h1>
         </div>
         <p class="hobby-description">${hobbyData.primary.reason}</p>
         ${hobbyData.primary.resources ? `

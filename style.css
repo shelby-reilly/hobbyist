@@ -1113,6 +1113,18 @@ body {
     letter-spacing: -0.02em;
 }
 
+.smiley-in-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 -0.05em;
+    transform: translateY(-0.08em);
+}
+
+.smiley-in-text svg {
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
 .hobby-icon-circle {
     position: absolute;
     top: 3rem;
