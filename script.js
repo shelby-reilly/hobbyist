@@ -259,8 +259,8 @@ const hobbies = {
             reason: 'Endless worlds to explore, all from the comfort of your favorite chair',
             emojis: ['📚', '📖'],
             resources: [
-                { type: 'instagram', name: '@bookstagram', link: 'https://instagram.com/bookstagram' },
-                { type: 'video', name: 'reading 101', link: 'https://youtube.com/results?search_query=how+to+start+reading+more' }
+                { type: 'instagram', name: '@nytbooks', link: 'https://instagram.com/nytbooks' },
+                { type: 'video', name: 'how to read more books', link: 'https://youtube.com/results?search_query=how+to+read+more+books+tips' }
             ]
         },
         alternatives: ['Programming', 'Writing', 'Chess', 'Puzzles', 'Learning a language']
@@ -272,8 +272,8 @@ const hobbies = {
             reason: 'Turn your emotions into art—no rules, just expression',
             emojis: ['🎨', '🖌️'],
             resources: [
-                { type: 'instagram', name: '@watercolorartist', link: 'https://instagram.com/watercolorartist' },
-                { type: 'video', name: 'watercolor painting 101', link: 'https://youtube.com/results?search_query=watercolor+painting+101' }
+                { type: 'instagram', name: '@skillshare', link: 'https://instagram.com/skillshare' },
+                { type: 'video', name: 'beginner painting tutorial', link: 'https://youtube.com/results?search_query=beginner+acrylic+painting+tutorial' }
             ]
         },
         alternatives: ['Drawing', 'Crafting', 'Origami', 'Knitting', 'Pottery']
@@ -285,8 +285,8 @@ const hobbies = {
             reason: 'Create delicious meals while mastering techniques—tastiest hobby ever',
             emojis: ['🍳', '🔪'],
             resources: [
-                { type: 'instagram', name: '@chefclub', link: 'https://instagram.com/chefclub' },
-                { type: 'video', name: 'cooking 101', link: 'https://youtube.com/results?search_query=cooking+basics+101' }
+                { type: 'instagram', name: '@bonappetitmag', link: 'https://instagram.com/bonappetitmag' },
+                { type: 'video', name: 'cooking basics for beginners', link: 'https://youtube.com/results?search_query=cooking+basics+for+beginners+joshua+weissman' }
             ]
         },
         alternatives: ['Baking', 'Woodworking', 'Home Improvement', 'Mixology', 'Candle making']
@@ -298,8 +298,8 @@ const hobbies = {
             reason: 'Nurture plants and watch them grow—living decor you can be proud of',
             emojis: ['🪴', '🌿'],
             resources: [
-                { type: 'instagram', name: '@houseplantclub', link: 'https://instagram.com/houseplantclub' },
-                { type: 'video', name: 'indoor plants 101', link: 'https://youtube.com/results?search_query=indoor+plant+care+101' }
+                { type: 'instagram', name: '@thesill', link: 'https://instagram.com/thesill' },
+                { type: 'video', name: 'houseplant care for beginners', link: 'https://youtube.com/results?search_query=houseplant+care+for+beginners' }
             ]
         },
         alternatives: ['Yoga at home', 'DIY projects', 'Terrarium building', 'Stretching routines', 'Journaling']
@@ -311,8 +311,8 @@ const hobbies = {
             reason: 'Solve puzzles under pressure with your crew—ultimate team brain challenge',
             emojis: ['🔐', '🧩'],
             resources: [
-                { type: 'instagram', name: '@escaperoom', link: 'https://instagram.com/escaperoom' },
-                { type: 'video', name: 'escape room tips', link: 'https://youtube.com/results?search_query=escape+room+tips' }
+                { type: 'instagram', name: '@escaperoomtips', link: 'https://instagram.com/theescapegame' },
+                { type: 'video', name: 'escape room strategies', link: 'https://youtube.com/results?search_query=escape+room+tips+and+tricks' }
             ]
         },
         alternatives: ['Board game nights', 'Book club', 'Trivia nights', 'Murder mystery parties', 'Coding clubs']
@@ -324,8 +324,8 @@ const hobbies = {
             reason: 'Learn new recipes while making friends—then eat your creations together',
             emojis: ['👨‍🍳', '🍴'],
             resources: [
-                { type: 'instagram', name: '@cookingclass', link: 'https://instagram.com/cookingclass' },
-                { type: 'video', name: 'cooking class basics', link: 'https://youtube.com/results?search_query=cooking+class+basics' }
+                { type: 'instagram', name: '@tasty', link: 'https://instagram.com/tasty' },
+                { type: 'video', name: 'group cooking ideas', link: 'https://youtube.com/results?search_query=easy+recipes+to+cook+with+friends' }
             ]
         },
         alternatives: ['Arts and crafts groups', 'Wine tasting', 'Pottery classes', 'DIY workshops', 'Game nights']
@@ -337,8 +337,8 @@ const hobbies = {
             reason: 'Get moving, learn choreography, and feel the rhythm with others',
             emojis: ['💃', '🕺'],
             resources: [
-                { type: 'instagram', name: '@dancetutorials', link: 'https://instagram.com/dancetutorials' },
-                { type: 'video', name: 'dance 101', link: 'https://youtube.com/results?search_query=beginner+dance+tutorial' }
+                { type: 'instagram', name: '@steeloaksocial', link: 'https://instagram.com/steezyco' },
+                { type: 'video', name: 'beginner dance tutorial', link: 'https://youtube.com/results?search_query=beginner+dance+tutorial+steezy' }
             ]
         },
         alternatives: ['Martial arts', 'Indoor rock climbing', 'Pole fitness', 'Acrobatics', 'Parkour']
@@ -350,8 +350,8 @@ const hobbies = {
             reason: 'Classic fun with friends—strikes, spares, and good conversation',
             emojis: ['🎳', '🎯'],
             resources: [
-                { type: 'instagram', name: '@bowlingtips', link: 'https://instagram.com/bowlingtips' },
-                { type: 'video', name: 'bowling 101', link: 'https://youtube.com/results?search_query=bowling+tips+for+beginners' }
+                { type: 'instagram', name: '@paborevolution', link: 'https://instagram.com/paborevolution' },
+                { type: 'video', name: 'bowling tips for beginners', link: 'https://youtube.com/results?search_query=bowling+tips+for+beginners+brad+and+kyle' }
             ]
         },
         alternatives: ['Group fitness', 'Social dancing', 'Roller skating', 'Ping pong leagues', 'Laser tag']
@@ -363,8 +363,8 @@ const hobbies = {
             reason: 'Connect with nature while learning about fascinating creatures in their habitat',
             emojis: ['🦅', '🔭'],
             resources: [
-                { type: 'instagram', name: '@birdwatchers', link: 'https://instagram.com/birdwatchers' },
-                { type: 'video', name: 'birdwatching 101', link: 'https://youtube.com/results?search_query=birdwatching+for+beginners' }
+                { type: 'instagram', name: '@auabornsociety', link: 'https://instagram.com/audubonsociety' },
+                { type: 'video', name: 'birdwatching for beginners', link: 'https://youtube.com/results?search_query=birdwatching+for+beginners+guide' }
             ]
         },
         alternatives: ['Photography', 'Geocaching', 'Astronomy', 'Foraging', 'Nature sketching']
@@ -376,8 +376,8 @@ const hobbies = {
             reason: 'Clear your mind on the trail—nature\'s best therapy session',
             emojis: ['🥾', '⛰️'],
             resources: [
-                { type: 'instagram', name: '@hikingadventures', link: 'https://instagram.com/hikingadventures' },
-                { type: 'video', name: 'hiking 101', link: 'https://youtube.com/results?search_query=hiking+for+beginners' }
+                { type: 'instagram', name: '@rei', link: 'https://instagram.com/rei' },
+                { type: 'video', name: 'hiking for beginners', link: 'https://youtube.com/results?search_query=hiking+for+beginners+rei' }
             ]
         },
         alternatives: ['Nature walks', 'Meditation in nature', 'Fishing', 'Beach walking', 'Park visits']
@@ -389,8 +389,8 @@ const hobbies = {
             reason: 'Conquer new heights and build serious strength—every route is a puzzle',
             emojis: ['🧗', '⛰️'],
             resources: [
-                { type: 'instagram', name: '@climbing', link: 'https://instagram.com/climbing' },
-                { type: 'video', name: 'rock climbing 101', link: 'https://youtube.com/results?search_query=rock+climbing+basics' }
+                { type: 'instagram', name: '@climbingmagazine', link: 'https://instagram.com/climbingmagazine' },
+                { type: 'video', name: 'rock climbing for beginners', link: 'https://youtube.com/results?search_query=rock+climbing+for+beginners+technique' }
             ]
         },
         alternatives: ['Trail running', 'Mountain biking', 'Skateboarding', 'Surfing', 'Bouldering']
@@ -402,8 +402,8 @@ const hobbies = {
             reason: 'Float your worries away—refreshing, freeing, and feels amazing',
             emojis: ['🏊', '🌊'],
             resources: [
-                { type: 'instagram', name: '@swimlife', link: 'https://instagram.com/swimlife' },
-                { type: 'video', name: 'swimming 101', link: 'https://youtube.com/results?search_query=swimming+techniques+for+beginners' }
+                { type: 'instagram', name: '@usaswimming', link: 'https://instagram.com/usaswimming' },
+                { type: 'video', name: 'swimming for beginners', link: 'https://youtube.com/results?search_query=learn+to+swim+adults+beginners' }
             ]
         },
         alternatives: ['Walking', 'Jogging', 'Kayaking', 'Stand-up paddleboarding', 'Cycling']
@@ -415,8 +415,8 @@ const hobbies = {
             reason: 'Capture beautiful moments while exploring with fellow photographers',
             emojis: ['📸', '📷'],
             resources: [
-                { type: 'instagram', name: '@photowalk', link: 'https://instagram.com/photowalk' },
-                { type: 'video', name: 'photography 101', link: 'https://youtube.com/results?search_query=photography+basics+tutorial' }
+                { type: 'instagram', name: '@natgeo', link: 'https://instagram.com/natgeo' },
+                { type: 'video', name: 'photography basics', link: 'https://youtube.com/results?search_query=street+photography+for+beginners' }
             ]
         },
         alternatives: ['Group hiking', 'Nature tours', 'Outdoor workshops', 'Community gardens', 'Bird watching groups']
@@ -428,8 +428,8 @@ const hobbies = {
             reason: 'Good food, great company, beautiful setting—simple pleasures done right',
             emojis: ['🧺', '🌳'],
             resources: [
-                { type: 'instagram', name: '@picnicideas', link: 'https://instagram.com/picnicideas' },
-                { type: 'video', name: 'picnic planning 101', link: 'https://youtube.com/results?search_query=how+to+plan+a+perfect+picnic' }
+                { type: 'instagram', name: '@countryliving', link: 'https://instagram.com/countryliving' },
+                { type: 'video', name: 'picnic planning ideas', link: 'https://youtube.com/results?search_query=aesthetic+picnic+ideas+setup' }
             ]
         },
         alternatives: ['Beach days', 'Park gatherings', 'Outdoor concerts', 'Farmers markets', 'Frisbee in the park']
@@ -441,8 +441,8 @@ const hobbies = {
             reason: 'Classic team sport that gets your heart pumping and builds camaraderie',
             emojis: ['⚽', '🥅'],
             resources: [
-                { type: 'instagram', name: '@soccerskills', link: 'https://instagram.com/soccerskills' },
-                { type: 'video', name: 'soccer 101', link: 'https://youtube.com/results?search_query=soccer+basics+for+beginners' }
+                { type: 'instagram', name: '@433', link: 'https://instagram.com/433' },
+                { type: 'video', name: 'soccer skills for beginners', link: 'https://youtube.com/results?search_query=soccer+skills+for+beginners' }
             ]
         },
         alternatives: ['Ultimate frisbee', 'Volleyball', 'Basketball', 'Flag football', 'Softball']
@@ -454,8 +454,8 @@ const hobbies = {
             reason: 'Ride together, chat while you pedal, and explore new routes',
             emojis: ['🚴', '🚲'],
             resources: [
-                { type: 'instagram', name: '@cyclinglife', link: 'https://instagram.com/cyclinglife' },
-                { type: 'video', name: 'cycling 101', link: 'https://youtube.com/results?search_query=cycling+tips+for+beginners' }
+                { type: 'instagram', name: '@gcabornsociety', link: 'https://instagram.com/gcn' },
+                { type: 'video', name: 'cycling for beginners', link: 'https://youtube.com/results?search_query=cycling+for+beginners+gcn' }
             ]
         },
         alternatives: ['Walking groups', 'Paddleboarding', 'Group swims', 'Casual sports leagues', 'Outdoor yoga']
@@ -468,8 +468,8 @@ const hobbies = {
             reason: 'Get moving, learn choreography, and feel the rhythm',
             emojis: ['💃', '🕺'],
             resources: [
-                { type: 'instagram', name: '@dancetutorials', link: 'https://instagram.com/dancetutorials' },
-                { type: 'video', name: 'dance 101', link: 'https://youtube.com/results?search_query=beginner+dance+tutorial' }
+                { type: 'instagram', name: '@steezyco', link: 'https://instagram.com/steezyco' },
+                { type: 'video', name: 'dance tutorials', link: 'https://youtube.com/results?search_query=learn+to+dance+at+home+beginner' }
             ]
         },
         alternatives: ['Indoor rock climbing', 'Martial arts', 'Parkour', 'Gymnastics', 'Boxing']
@@ -481,8 +481,8 @@ const hobbies = {
             reason: 'Find your flow and inner peace through mindful movement',
             emojis: ['🧘', '🕉️'],
             resources: [
-                { type: 'instagram', name: '@yogapractice', link: 'https://instagram.com/yogapractice' },
-                { type: 'video', name: 'yoga 101', link: 'https://youtube.com/results?search_query=yoga+for+beginners' }
+                { type: 'instagram', name: '@yogawithadriene', link: 'https://instagram.com/yogawithadriene' },
+                { type: 'video', name: 'yoga for beginners', link: 'https://youtube.com/results?search_query=yoga+with+adriene+beginners' }
             ]
         },
         alternatives: ['Stretching', 'Pilates', 'Tai chi', 'Meditation', 'Breathwork']
@@ -494,8 +494,8 @@ const hobbies = {
             reason: 'Build strength and discipline one rep at a time',
             emojis: ['🏋️', '💪'],
             resources: [
-                { type: 'instagram', name: '@fitnesstips', link: 'https://instagram.com/fitnesstips' },
-                { type: 'video', name: 'weightlifting 101', link: 'https://youtube.com/results?search_query=weightlifting+for+beginners' }
+                { type: 'instagram', name: '@jeffnippard', link: 'https://instagram.com/jeffnippard' },
+                { type: 'video', name: 'weightlifting for beginners', link: 'https://youtube.com/results?search_query=weightlifting+for+beginners+jeff+nippard' }
             ]
         },
         alternatives: ['Calisthenics', 'CrossFit', 'Powerlifting', 'Bodybuilding', 'Kettlebells']
@@ -507,8 +507,8 @@ const hobbies = {
             reason: 'Float your worries away—refreshing, freeing, and feels amazing',
             emojis: ['🏊', '🌊'],
             resources: [
-                { type: 'instagram', name: '@swimlife', link: 'https://instagram.com/swimlife' },
-                { type: 'video', name: 'swimming 101', link: 'https://youtube.com/results?search_query=swimming+techniques+for+beginners' }
+                { type: 'instagram', name: '@usaswimming', link: 'https://instagram.com/usaswimming' },
+                { type: 'video', name: 'learn to swim', link: 'https://youtube.com/results?search_query=learn+to+swim+adults+beginners' }
             ]
         },
         alternatives: ['Aqua aerobics', 'Water walking', 'Floating', 'Hot tub sessions', 'Sauna']
@@ -520,8 +520,8 @@ const hobbies = {
             reason: 'Get moving, learn choreography, and feel the rhythm with others',
             emojis: ['💃', '🕺'],
             resources: [
-                { type: 'instagram', name: '@dancetutorials', link: 'https://instagram.com/dancetutorials' },
-                { type: 'video', name: 'dance 101', link: 'https://youtube.com/results?search_query=beginner+dance+tutorial' }
+                { type: 'instagram', name: '@steezyco', link: 'https://instagram.com/steezyco' },
+                { type: 'video', name: 'group dance tutorials', link: 'https://youtube.com/results?search_query=beginner+dance+class+tutorial' }
             ]
         },
         alternatives: ['Martial arts', 'Indoor rock climbing', 'Pole fitness', 'Acrobatics', 'Parkour']
@@ -533,8 +533,8 @@ const hobbies = {
             reason: 'Casual workout vibes with friends—fun over perfection',
             emojis: ['🤸', '💪'],
             resources: [
-                { type: 'instagram', name: '@groupfitness', link: 'https://instagram.com/groupfitness' },
-                { type: 'video', name: 'group fitness 101', link: 'https://youtube.com/results?search_query=group+fitness+classes' }
+                { type: 'instagram', name: '@popsugarfitness', link: 'https://instagram.com/popsugarfitness' },
+                { type: 'video', name: 'fun group workouts', link: 'https://youtube.com/results?search_query=fun+group+workout+class' }
             ]
         },
         alternatives: ['Zumba', 'Spin class', 'Barre', 'Yoga class', 'Dance cardio']
@@ -546,8 +546,8 @@ const hobbies = {
             reason: 'Get moving, learn choreography, and feel the rhythm with others',
             emojis: ['💃', '🕺'],
             resources: [
-                { type: 'instagram', name: '@dancetutorials', link: 'https://instagram.com/dancetutorials' },
-                { type: 'video', name: 'dance 101', link: 'https://youtube.com/results?search_query=beginner+dance+tutorial' }
+                { type: 'instagram', name: '@steezyco', link: 'https://instagram.com/steezyco' },
+                { type: 'video', name: 'dance class tutorial', link: 'https://youtube.com/results?search_query=hip+hop+dance+class+beginner' }
             ]
         },
         alternatives: ['Martial arts', 'Indoor rock climbing', 'Pole fitness', 'Acrobatics', 'Parkour']
@@ -559,8 +559,8 @@ const hobbies = {
             reason: 'Classic fun with friends—strikes, spares, and good conversation',
             emojis: ['🎳', '🎯'],
             resources: [
-                { type: 'instagram', name: '@bowlingtips', link: 'https://instagram.com/bowlingtips' },
-                { type: 'video', name: 'bowling 101', link: 'https://youtube.com/results?search_query=bowling+tips+for+beginners' }
+                { type: 'instagram', name: '@paborevolution', link: 'https://instagram.com/paborevolution' },
+                { type: 'video', name: 'bowling tips', link: 'https://youtube.com/results?search_query=bowling+tips+for+beginners+brad+and+kyle' }
             ]
         },
         alternatives: ['Group fitness', 'Social dancing', 'Roller skating', 'Ping pong leagues', 'Laser tag']
@@ -573,8 +573,8 @@ const hobbies = {
             reason: 'Cultivate your own little paradise and learn about nature',
             emojis: ['🌱', '🌻'],
             resources: [
-                { type: 'instagram', name: '@gardeningtips', link: 'https://instagram.com/gardeningtips' },
-                { type: 'video', name: 'gardening 101', link: 'https://youtube.com/results?search_query=gardening+for+beginners' }
+                { type: 'instagram', name: '@gardeners', link: 'https://instagram.com/gardeners' },
+                { type: 'video', name: 'gardening for beginners', link: 'https://youtube.com/results?search_query=gardening+for+beginners+epic+gardening' }
             ]
         },
         alternatives: ['Nature journaling', 'Outdoor sketching', 'Plant identification', 'Birdhouse building', 'Composting']
@@ -586,8 +586,8 @@ const hobbies = {
             reason: 'Capture the beauty around you at your own peaceful pace',
             emojis: ['📸', '🌿'],
             resources: [
-                { type: 'instagram', name: '@naturephotography', link: 'https://instagram.com/naturephotography' },
-                { type: 'video', name: 'photography 101', link: 'https://youtube.com/results?search_query=nature+photography+tutorial' }
+                { type: 'instagram', name: '@natgeo', link: 'https://instagram.com/natgeo' },
+                { type: 'video', name: 'nature photography tips', link: 'https://youtube.com/results?search_query=nature+photography+for+beginners' }
             ]
         },
         alternatives: ['Outdoor painting', 'Nature walks', 'Sunset watching', 'Stargazing', 'Beach combing']
@@ -599,8 +599,8 @@ const hobbies = {
             reason: 'Build things with your hands in the fresh air',
             emojis: ['🪚', '🪵'],
             resources: [
-                { type: 'instagram', name: '@woodworking', link: 'https://instagram.com/woodworking' },
-                { type: 'video', name: 'woodworking 101', link: 'https://youtube.com/results?search_query=beginner+woodworking' }
+                { type: 'instagram', name: '@woodworking_art', link: 'https://instagram.com/woodworking_art' },
+                { type: 'video', name: 'beginner woodworking', link: 'https://youtube.com/results?search_query=woodworking+for+beginners+steve+ramsey' }
             ]
         },
         alternatives: ['Gardening', 'Trail building', 'Campfire cooking', 'Bushcraft', 'Stone carving']
@@ -612,8 +612,8 @@ const hobbies = {
             reason: 'Get your hands dirty and watch your garden grow',
             emojis: ['🌱', '🌻'],
             resources: [
-                { type: 'instagram', name: '@gardeningtips', link: 'https://instagram.com/gardeningtips' },
-                { type: 'video', name: 'gardening 101', link: 'https://youtube.com/results?search_query=gardening+for+beginners' }
+                { type: 'instagram', name: '@gardeners', link: 'https://instagram.com/gardeners' },
+                { type: 'video', name: 'relaxing gardening tips', link: 'https://youtube.com/results?search_query=relaxing+garden+tour' }
             ]
         },
         alternatives: ['Outdoor yoga', 'Hammocking', 'Beach walking', 'Park visits', 'Nature meditation']
@@ -625,8 +625,8 @@ const hobbies = {
             reason: 'Grow food and friendships in a shared green space',
             emojis: ['🌻', '🥕'],
             resources: [
-                { type: 'instagram', name: '@communitygarden', link: 'https://instagram.com/communitygarden' },
-                { type: 'video', name: 'community gardening 101', link: 'https://youtube.com/results?search_query=community+gardening' }
+                { type: 'instagram', name: '@gardeners', link: 'https://instagram.com/gardeners' },
+                { type: 'video', name: 'community garden tips', link: 'https://youtube.com/results?search_query=how+to+start+community+garden' }
             ]
         },
         alternatives: ['Photography walks', 'Outdoor art classes', 'Nature tours', 'Outdoor workshops', 'Bird watching groups']
@@ -638,8 +638,8 @@ const hobbies = {
             reason: 'Good food, great company, beautiful setting—simple pleasures done right',
             emojis: ['🧺', '🌳'],
             resources: [
-                { type: 'instagram', name: '@picnicideas', link: 'https://instagram.com/picnicideas' },
-                { type: 'video', name: 'picnic planning 101', link: 'https://youtube.com/results?search_query=how+to+plan+a+perfect+picnic' }
+                { type: 'instagram', name: '@countryliving', link: 'https://instagram.com/countryliving' },
+                { type: 'video', name: 'picnic ideas', link: 'https://youtube.com/results?search_query=aesthetic+picnic+ideas+setup' }
             ]
         },
         alternatives: ['Beach days', 'Park gatherings', 'Outdoor concerts', 'Farmers markets', 'Outdoor dining']
@@ -651,8 +651,8 @@ const hobbies = {
             reason: 'Build cool stuff outside with your crew',
             emojis: ['🔨', '🪚'],
             resources: [
-                { type: 'instagram', name: '@diyprojects', link: 'https://instagram.com/diyprojects' },
-                { type: 'video', name: 'outdoor DIY 101', link: 'https://youtube.com/results?search_query=outdoor+diy+projects' }
+                { type: 'instagram', name: '@dikiykurabiye', link: 'https://instagram.com/diynetwork' },
+                { type: 'video', name: 'outdoor DIY projects', link: 'https://youtube.com/results?search_query=easy+outdoor+diy+projects' }
             ]
         },
         alternatives: ['Community gardens', 'Trail maintenance', 'Beach cleanups', 'Park improvement', 'Outdoor building']
@@ -664,8 +664,8 @@ const hobbies = {
             reason: 'Sun, sand, and friends—the ultimate chill outdoor hang',
             emojis: ['🏖️', '🌊'],
             resources: [
-                { type: 'instagram', name: '@beachlife', link: 'https://instagram.com/beachlife' },
-                { type: 'video', name: 'beach day tips', link: 'https://youtube.com/results?search_query=perfect+beach+day' }
+                { type: 'instagram', name: '@beautifuldestinations', link: 'https://instagram.com/beautifuldestinations' },
+                { type: 'video', name: 'beach day essentials', link: 'https://youtube.com/results?search_query=beach+day+essentials+packing' }
             ]
         },
         alternatives: ['Park hangs', 'Outdoor BBQ', 'Frisbee', 'Cornhole', 'Outdoor yoga']
