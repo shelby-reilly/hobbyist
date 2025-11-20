@@ -1892,6 +1892,11 @@ body {
         max-height: 180px;
     }
 
+    /* Brainy icon needs extra space due to larger illustration */
+    .icon-brainy img {
+        margin-top: 1rem;
+    }
+
     /* Both button - make it more visible */
     .both-btn-container {
         min-height: 12vh;
