@@ -902,7 +902,14 @@ function getTraitTagsData(profile) {
 // Format hobby name with smiley in O or after the name
 function formatHobbyNameWithSmiley(name) {
     const upperName = name.toUpperCase();
-    const smileyPink = `<span class="smiley-in-text"><svg width="0.85em" height="0.85em" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    const smileyInO = `<span class="smiley-in-o"><svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="58" fill="#F786E2"/>
+        <path d="M40 54C43.5 47 53 47.5 56 54" stroke="#2D3748" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M64 54C67.5 47 77 47.5 80 54" stroke="#2D3748" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M55 70C57 77 63 77 65 70" stroke="#2D3748" stroke-width="4.5" stroke-linecap="round"/>
+    </svg></span>`;
+
+    const smileyAfter = `<span class="smiley-after-text"><svg width="0.85em" height="0.85em" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="60" cy="60" r="58" fill="#F786E2"/>
         <path d="M40 54C43.5 47 53 47.5 56 54" stroke="#2D3748" stroke-width="4.5" stroke-linecap="round"/>
         <path d="M64 54C67.5 47 77 47.5 80 54" stroke="#2D3748" stroke-width="4.5" stroke-linecap="round"/>
@@ -911,12 +918,12 @@ function formatHobbyNameWithSmiley(name) {
 
     // Check if name contains O
     if (upperName.includes('O')) {
-        // Replace first O with smiley
+        // Put smiley inside the O (O stays visible, smiley overlays in center)
         const firstOIndex = upperName.indexOf('O');
-        return upperName.substring(0, firstOIndex) + smileyPink + upperName.substring(firstOIndex + 1);
+        return upperName.substring(0, firstOIndex) + '<span class="o-with-smiley">O' + smileyInO + '</span>' + upperName.substring(firstOIndex + 1);
     } else {
         // Add smiley after the name
-        return upperName + ' ' + smileyPink;
+        return upperName + ' ' + smileyAfter;
     }
 }
 

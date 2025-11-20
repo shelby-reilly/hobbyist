@@ -1113,14 +1113,39 @@ body {
     letter-spacing: -0.02em;
 }
 
-.smiley-in-text {
+/* O with smiley inside */
+.o-with-smiley {
+    position: relative;
     display: inline-block;
-    vertical-align: middle;
-    margin: 0 -0.05em;
-    transform: translateY(-0.08em);
 }
 
-.smiley-in-text svg {
+.smiley-in-o {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.55em;
+    height: 0.55em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.smiley-in-o svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Smiley after text (for names without O) */
+.smiley-after-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.1em;
+    transform: translateY(-0.05em);
+}
+
+.smiley-after-text svg {
     display: block;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
 }
