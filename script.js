@@ -919,19 +919,24 @@ function generateLocalResources(hobbyName, location) {
 
     return [
         {
-            name: `${hobbyName} groups on Meetup`,
-            link: `https://www.meetup.com/find/?keywords=${encodedHobby}&location=${encodedLocation}`,
+            name: `${hobbyName} groups near me`,
+            link: `https://www.meetup.com/find/?keywords=${encodedHobby}&location=${encodedLocation}&source=EVENTS`,
             icon: '🤝'
-        },
-        {
-            name: `${hobbyName} groups on Facebook`,
-            link: `https://www.facebook.com/search/groups/?q=${encodedHobby}%20${encodedLocation}`,
-            icon: '👥'
         },
         {
             name: `${hobbyName} classes near ${location}`,
             link: `https://www.google.com/search?q=${encodedHobby}+classes+near+${encodedLocation}`,
             icon: '📍'
+        },
+        {
+            name: `${hobbyName} clubs in ${location}`,
+            link: `https://www.google.com/search?q=${encodedHobby}+club+${encodedLocation}`,
+            icon: '🏠'
+        },
+        {
+            name: `${hobbyName} events near ${location}`,
+            link: `https://www.eventbrite.com/d/nearby/${encodedHobby}/?loc=${encodedLocation}`,
+            icon: '🎟️'
         }
     ];
 }
