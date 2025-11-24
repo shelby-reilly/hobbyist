@@ -52,7 +52,7 @@ const inlineSVGs = {
         <path id="maker-smile" d="M262.842 130.072C268.546 137.755 278.953 134.737 279.32 125.294" stroke="black" stroke-width="5.41781" stroke-linecap="round"/>
         <rect id="maker-purple" x="52" y="188" width="106" height="150" rx="12" fill="#6451FA"/>
         <rect id="maker-yellow" x="192" y="188" width="319" height="148" rx="12" fill="#FFDA67"/>
-        <path id="maker-triangle" d="M94.6077 27C99.2265 19 110.774 19 115.392 27L185.54 148.5C190.159 156.5 184.386 166.5 175.148 166.5H34.852C25.6143 166.5 19.8408 156.5 24.4596 148.5L94.6077 27Z" fill="#D0B0F2"/>
+        <path id="maker-triangle" d="M94.6077 27C99.2265 19 110.774 19 115.392 27L185.54 148.5C190.159 156.5 184.386 166.5 175.148 166.5H34.852C25.6143 166.5 19.8408 156.5 24.4596 148.5L94.6077 27Z" fill="#9747FF"/>
         <rect id="maker-square" x="353" width="158" height="158" rx="12" fill="#6451FA"/>
         </g>
         <defs>
