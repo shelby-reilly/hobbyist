@@ -789,7 +789,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background: #5DCB83;
+    background: #FCD34D;
     flex: 1;
     cursor: pointer;
     position: relative;
@@ -799,7 +799,7 @@ body {
 .both-btn {
     background: transparent;
     border: none;
-    color: #6451FA;
+    color: #5B4EFF;
     font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
@@ -815,6 +815,17 @@ body {
 
 .both-btn-container:active .both-btn {
     transform: scale(0.95);
+}
+
+/* Green both button for Maker/Mover and Learn/Relax pages */
+#question2 .both-btn-container,
+#question5 .both-btn-container {
+    background: #5DCB83;
+}
+
+#question2 .both-btn,
+#question5 .both-btn {
+    color: #6451FA;
 }
 
 /* Location Input Page */
