@@ -891,6 +891,8 @@ body {
     min-height: 44px;
     margin-top: 1rem;
     -webkit-tap-highlight-color: transparent;
+    width: 300px;
+    box-sizing: border-box;
 }
 
 .local-submit-btn:hover {
