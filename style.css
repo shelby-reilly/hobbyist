@@ -625,28 +625,28 @@ body {
 }
 
 @keyframes bookfall1 {
-    0% { transform: translateY(-30px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
 }
 
 @keyframes bookfall2 {
-    0% { transform: translateY(-30px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
 }
 
 @keyframes bookfall3 {
-    0% { transform: translateY(-30px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
 }
 
 @keyframes bookfall4 {
-    0% { transform: translateY(-30px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
 }
 
 @keyframes bookfall5 {
-    0% { transform: translateY(-30px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
 }
 
 /* Relax - Trees stay, hammock swings */
