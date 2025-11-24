@@ -307,9 +307,13 @@ body {
     to { transform: rotate(360deg); }
 }
 
-/* Maker - Purple block falls, smiley bounces over */
+/* Maker - Purple block falls, triangle falls, smiley bounces over */
 .split-option:hover .icon-maker #maker-purple {
     animation: blockfall 0.8s ease-out;
+}
+
+.split-option:hover .icon-maker #maker-triangle {
+    animation: trianglefall 0.6s ease-out;
 }
 
 .split-option:hover .icon-maker #maker-smiley,
@@ -321,6 +325,10 @@ body {
 
 /* Auto-play on mobile/touch devices */
 @media (hover: none) and (pointer: coarse) {
+    .icon-maker #maker-triangle {
+        animation: trianglefall 0.6s ease-out;
+    }
+
     .icon-maker #maker-smiley,
     .icon-maker #maker-eye1,
     .icon-maker #maker-eye2,
@@ -331,6 +339,11 @@ body {
 
 @keyframes blockfall {
     0% { opacity: 0; transform: translateY(-50px) rotate(-90deg); }
+    100% { opacity: 1; transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes trianglefall {
+    0% { opacity: 0; transform: translateY(-80px) rotate(-180deg); }
     100% { opacity: 1; transform: translateY(0) rotate(0deg); }
 }
 
