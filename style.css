@@ -871,6 +871,31 @@ body {
     border-bottom: 2px solid white;
 }
 
+.local-submit-btn {
+    background: #FCD34D;
+    border: none;
+    color: #9747FF;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Prompt', sans-serif;
+    min-height: 44px;
+    margin-top: 1rem;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.local-submit-btn:hover {
+    transform: scale(1.05);
+    background: #FFE066;
+}
+
+.local-submit-btn:active {
+    transform: scale(0.98);
+}
+
 .skip-btn {
     background: transparent;
     border: none;
@@ -882,6 +907,7 @@ body {
     text-align: left;
     width: fit-content;
     min-height: 44px;
+    margin-top: 0.5rem;
     -webkit-tap-highlight-color: transparent;
 }
 

@@ -735,6 +735,17 @@ function selectAnswer(questionNum, answer) {
     }, 600);
 }
 
+function submitLocation() {
+    const cityInput = document.getElementById('cityInput');
+    if (cityInput && cityInput.value.trim()) {
+        userAnswers.location = cityInput.value.trim();
+        showResults();
+    } else {
+        // If empty, just skip
+        skipLocation();
+    }
+}
+
 function skipLocation() {
     userAnswers.location = null;
     showResults();
@@ -899,6 +910,32 @@ function getTraitTagsData(profile) {
     return tags;
 }
 
+// Generate local resources based on hobby and location
+function generateLocalResources(hobbyName, location) {
+    if (!location) return null;
+
+    const encodedHobby = encodeURIComponent(hobbyName);
+    const encodedLocation = encodeURIComponent(location);
+
+    return [
+        {
+            name: `${hobbyName} groups on Meetup`,
+            link: `https://www.meetup.com/find/?keywords=${encodedHobby}&location=${encodedLocation}`,
+            icon: '🤝'
+        },
+        {
+            name: `${hobbyName} groups on Facebook`,
+            link: `https://www.facebook.com/search/groups/?q=${encodedHobby}%20${encodedLocation}`,
+            icon: '👥'
+        },
+        {
+            name: `${hobbyName} classes near ${location}`,
+            link: `https://www.google.com/search?q=${encodedHobby}+classes+near+${encodedLocation}`,
+            icon: '📍'
+        }
+    ];
+}
+
 // Format hobby name with smiley in O or after the name
 function formatHobbyNameWithSmiley(name) {
     const upperName = name.toUpperCase();
@@ -934,6 +971,9 @@ function showHobbyPage() {
     const hobbyContent = document.getElementById('hobbyContent');
     const formattedName = formatHobbyNameWithSmiley(hobbyData.primary.name);
 
+    // Generate local resources if user provided location
+    const localResources = generateLocalResources(hobbyData.primary.name, userAnswers.location);
+
     hobbyContent.innerHTML = `
         <div class="hobby-page-header">
             <h2 class="hobby-intro">Say hello to your new hobby:</h2>
@@ -947,6 +987,18 @@ function showHobbyPage() {
                     ${hobbyData.primary.resources.map(resource => `
                         <a href="${resource.link}" target="_blank" class="resource-link">
                             ${resource.type === 'instagram' ? '📷' : '→'} ${resource.name}
+                        </a>
+                    `).join('')}
+                </div>
+            </div>
+        ` : ''}
+        ${localResources ? `
+            <div class="hobby-resources local-resources">
+                <h3 class="resources-title">LOCAL GROUPS</h3>
+                <div class="resources-list">
+                    ${localResources.map(resource => `
+                        <a href="${resource.link}" target="_blank" class="resource-link">
+                            ${resource.icon} ${resource.name}
                         </a>
                     `).join('')}
                 </div>
