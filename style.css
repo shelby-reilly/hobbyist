@@ -548,12 +548,7 @@ body {
 }
 
 /* Brawny - Dumbbells pump */
-#brawny-dumbbell-left,
-#brawny-dumbbell-right,
-#brawny-dumbbell-center {
-    transform-origin: center bottom;
-    transform-box: fill-box;
-}
+/* Brawny dumbbells - pure vertical movement, no transform-origin needed */
 
 .split-option:hover .icon-brawny #brawny-dumbbell-left,
 .split-option:hover .icon-brawny #brawny-dumbbell-right {
