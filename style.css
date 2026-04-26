@@ -2326,3 +2326,353 @@ body {
         min-height: 50vh;
     }
 }
+
+/* ===========================
+   About Button
+   =========================== */
+.about-btn {
+    position: absolute;
+    top: max(1.5rem, env(safe-area-inset-top));
+    right: max(1.5rem, env(safe-area-inset-right));
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: none;
+    color: #6451FA;
+    font-family: 'Prompt', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 36px;
+    letter-spacing: 0.02em;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.about-btn:hover {
+    background: #6451FA;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(100, 81, 250, 0.3);
+}
+
+.about-btn:active {
+    transform: translateY(0) scale(0.96);
+    box-shadow: none;
+}
+
+.about-btn:focus-visible {
+    outline: 3px solid #6451FA;
+    outline-offset: 3px;
+}
+
+/* ===========================
+   About Overlay
+   =========================== */
+.about-overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #89CFF0 0%, #7B68EE 50%, #E6B0FF 100%);
+    z-index: 500;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(14px) scale(0.98);
+    transition: opacity 0.3s ease, transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0) scale(1);
+}
+
+.about-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: max(1.5rem, env(safe-area-inset-top)) 2rem 0.75rem max(1.5rem, env(safe-area-inset-left));
+}
+
+.about-close-btn {
+    background: none;
+    border: none;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    min-height: 44px;
+    min-width: 44px;
+    -webkit-tap-highlight-color: transparent;
+    transition: opacity 0.2s;
+    border-radius: 8px;
+}
+
+.about-close-btn:hover {
+    opacity: 0.65;
+}
+
+.about-close-btn:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 2px;
+}
+
+.about-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 4rem 2rem;
+    position: relative;
+}
+
+.about-smiley-wrap {
+    position: absolute;
+    top: calc(2.8rem + 16px);
+    left: calc(44% + 16px);
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+}
+
+@keyframes aboutSmileyFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.about-intro {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 0.2rem;
+    margin-top: 0;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.about-title {
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: #FFD966;
+    line-height: 0.95;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: slideInLeft 0.8s ease-out 0.3s backwards;
+}
+
+.about-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    max-width: 560px;
+    animation: fadeInUp 0.8s ease-out 0.6s backwards;
+}
+
+.about-body p {
+    font-size: 1.05rem;
+    color: white;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.about-body strong {
+    color: #FFD966;
+    font-weight: 700;
+}
+
+.about-body a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.about-body a:hover strong {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.about-body + .about-seesaw {
+    margin-top: 3rem;
+}
+
+.about-seesaw + .about-resources {
+    margin-top: 2rem;
+}
+
+.about-resources {
+    margin-bottom: 0;
+    animation: fadeInUp 0.8s ease-out 0.9s backwards;
+}
+
+.about-resources-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #FFD966;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.about-resource-link {
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding: 0.25rem 0;
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.about-resource-link:hover {
+    color: #FFD966;
+    transform: translateX(5px);
+}
+
+.about-resource-icon {
+    transition: transform 0.3s ease;
+}
+
+.about-resource-link:hover .about-resource-icon {
+    transform: translateX(3px);
+}
+
+.about-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    animation: fadeInUp 0.8s ease-out 1.1s backwards;
+}
+
+.about-pill {
+    display: inline-block;
+    padding: 0.55rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-btn {
+        top: max(1rem, env(safe-area-inset-top));
+        right: max(1rem, env(safe-area-inset-right));
+        font-size: 0.8rem;
+        padding: 0.45rem 1rem;
+    }
+
+    .about-content {
+        padding: 2rem 1.5rem 5rem;
+    }
+
+    .about-smiley-wrap {
+        position: static;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-intro {
+        font-size: 1.8rem;
+    }
+
+    .about-title {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-body p {
+        font-size: 1.15rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-intro {
+        font-size: 1.5rem;
+    }
+
+    .about-title {
+        font-size: 3rem;
+    }
+
+    .about-content {
+        padding: 1.5rem 1.25rem 4rem;
+    }
+
+    .about-body p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+/* ===========================
+   Seesaw Illustration
+   =========================== */
+.about-seesaw {
+    align-self: center;
+    height: clamp(132px, 16.8vh, 204px);
+    flex-shrink: 0;
+    pointer-events: none;
+    width: 100%;
+    overflow: visible;
+    margin: 1.25rem 0 0.5rem;
+}
+
+#seesaw-svg {
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#seesaw-system {
+    transform-box: view-box;
+    transform-origin: 273.578px 183.999px;
+    animation: seesawTilt 5s ease-in-out infinite;
+}
+
+@keyframes seesawTilt {
+    0%, 5%  { transform: rotate(0deg); animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); }
+    42%     { transform: rotate(-30deg); }
+    57%     { transform: rotate(-30deg); animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); }
+    87%     { transform: rotate(0deg); }
+    100%    { transform: rotate(0deg); }
+}
+
+#purple-smiley {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: purpleRoll 5s ease-in-out infinite;
+}
+
+@keyframes purpleRoll {
+    0%, 5%  { transform: translate(0px, 0px) rotate(0deg); animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); }
+    42%     { transform: translate(-240px, -60px) rotate(-317deg); }
+    57%     { transform: translate(-240px, -60px) rotate(-317deg); animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); }
+    87%     { transform: translate(0px, 0px) rotate(0deg); }
+    100%    { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #seesaw-system,
+    #purple-smiley {
+        animation: none;
+    }
+}

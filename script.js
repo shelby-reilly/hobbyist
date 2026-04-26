@@ -1123,4 +1123,23 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') {
         goBack();
     }
+    if (e.key === 'Escape') {
+        const overlay = document.getElementById('aboutOverlay');
+        if (overlay && overlay.classList.contains('open')) closeAbout();
+    }
 });
+
+// About overlay
+function openAbout() {
+    const overlay = document.getElementById('aboutOverlay');
+    overlay.classList.add('open');
+    overlay.scrollTop = 0;
+    overlay.querySelector('.about-close-btn').focus();
+}
+
+function closeAbout() {
+    const overlay = document.getElementById('aboutOverlay');
+    overlay.classList.remove('open');
+    const aboutBtn = document.querySelector('.about-btn');
+    if (aboutBtn) aboutBtn.focus();
+}

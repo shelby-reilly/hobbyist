@@ -14,6 +14,7 @@
         <div class="background-animation">
             <div class="background-layer"></div>
         </div>
+        <button class="about-btn" onclick="openAbout()" aria-label="About Hobbyist">About</button>
         <div class="container">
             <svg class="logo-img" width="1084" height="162" viewBox="0 0 1084 162" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="smiley-clickable" style="cursor: pointer;">
@@ -239,6 +240,75 @@
         <div class="hobby-page-container">
             <div id="hobbyContent"></div>
             <div id="otherHobbies"></div>
+        </div>
+    </div>
+
+    <!-- About Overlay -->
+    <div class="about-overlay" id="aboutOverlay" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+        <div class="about-header">
+            <button class="about-close-btn" onclick="closeAbout()">← Back</button>
+        </div>
+        <div class="about-content">
+            <div class="about-smiley-wrap" aria-hidden="true">
+                <svg width="54" height="54" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="36" cy="36" r="34" fill="#5DCB83"/>
+                    <path d="M23 32C25 28.5 30 28.8 31.5 32" stroke="#6451FA" stroke-width="2.8" stroke-linecap="round"/>
+                    <path d="M40 32C42 28.5 47 28.8 48.5 32" stroke="#6451FA" stroke-width="2.8" stroke-linecap="round"/>
+                    <path d="M30.5 42C32.5 47 39.5 47 41.5 42" stroke="#6451FA" stroke-width="2.8" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <p class="about-intro">The story behind</p>
+            <h1 class="about-title" id="aboutTitle">Hobbyist</h1>
+            <div class="about-body">
+                <p>Hobbyist was built to help people find their happy habit — whether that means trying something creative, getting outside, meeting people nearby, or simply making more room for play.</p>
+            </div>
+            <div class="about-body">
+                <p>Two hobby-obsessed friends made this together, collaborating on UX design, visual design, interaction design, and illustrations. <a href="https://www.shelbyreilly.com" target="_blank" rel="noopener"><strong>Shelby Reilly</strong></a> led animations (yes, every tiny bounce was intentional), AI implementation, and web development. <a href="https://www.morganhoosedesign.com/" target="_blank" rel="noopener"><strong>Morgan Hoose</strong></a> led brand design (including our iconic Hobbyist smiley) and art direction.</p>
+                <p>We hope it helps you find something that actually sticks — and makes life a little more fun. Because it should be.</p>
+            </div>
+            <div class="about-seesaw" aria-hidden="true">
+            <svg id="seesaw-svg" width="548" height="293" viewBox="0 0 548 293" fill="none" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+                <g>
+                    <g id="seesaw-system">
+                        <g id="green-smiley">
+                            <circle cx="493.286" cy="160.707" r="43.3485" fill="#5DCB83"/>
+                            <path d="M473.93 156.603C477.365 151.45 485.094 151.879 487.241 156.603" stroke="black" stroke-width="3.66325" stroke-linecap="round"/>
+                            <path d="M499.453 156.603C502.888 151.45 510.617 151.879 512.764 156.603" stroke="black" stroke-width="3.66325" stroke-linecap="round"/>
+                            <path d="M487.367 170.002C489.625 176.066 496.951 176.066 498.967 170.002" stroke="black" stroke-width="3.66325" stroke-linecap="round"/>
+                        </g>
+                        <g id="pink-smiley">
+                            <circle cx="65.2836" cy="49.7054" r="43.3485" transform="rotate(-16.1697 65.2836 49.7054)" fill="#F786E2"/>
+                            <path d="M45.5553 51.1555C47.4196 45.2498 54.9625 43.5098 58.3399 47.4485" stroke="black" stroke-width="3.66325" stroke-linecap="round"/>
+                            <path d="M70.0631 44.0461C71.9274 38.1404 79.4703 36.4004 82.8477 40.3391" stroke="black" stroke-width="3.66325" stroke-linecap="round"/>
+                            <path d="M62.1867 60.2837C66.0433 65.4786 73.08 63.4384 73.3281 57.0533" stroke="black" stroke-width="3.66325" stroke-linecap="round"/>
+                        </g>
+                        <g id="purple-smiley">
+                            <circle cx="397.23" cy="135.649" r="43.3485" transform="rotate(25.119 397.23 135.649)" fill="#FBC15F"/>
+                            <path d="M381.451 123.717C386.748 120.51 393.564 124.18 393.503 129.368" stroke="black" stroke-width="3.66325" stroke-linecap="round"/>
+                            <path d="M404.552 134.553C409.85 131.346 416.666 135.016 416.604 140.204" stroke="black" stroke-width="3.66325" stroke-linecap="round"/>
+                            <path d="M387.923 141.553C387.393 148.002 394.026 151.112 398.426 146.478" stroke="black" stroke-width="3.66325" stroke-linecap="round"/>
+                        </g>
+                        <rect id="seesaw-seat" x="10.0938" y="88.7095" width="556" height="39" rx="12" transform="rotate(15 10.0938 88.7095)" fill="#6451FA"/>
+                    </g>
+                    <g id="seesaw-pivot">
+                        <rect x="231.578" y="149.999" width="84" height="143" rx="40" fill="#6451FA"/>
+                        <rect x="209.578" y="254.999" width="128" height="38" rx="12" fill="#6451FA"/>
+                        <circle cx="273.578" cy="183.999" r="16" fill="#B780FF"/>
+                    </g>
+                </g>
+                <defs>
+                    <clipPath id="clip_seesaw">
+                        <rect width="547.149" height="293" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+            <div class="about-resources">
+                <p class="about-resources-title">View the Process</p>
+                <a href="https://dribbble.com/shots/24047211-Hobbyist-Illustrations-Indoors-vs-Outdoors" target="_blank" rel="noopener" class="about-resource-link">
+                    <span class="about-resource-icon">→</span> Hobbyist on Dribbble
+                </a>
+            </div>
         </div>
     </div>
 
