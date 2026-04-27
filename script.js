@@ -777,13 +777,7 @@ function showResults() {
         typeContent.innerHTML = `
             <div class="type-page-header">
                 <h2 class="type-intro">Your Hobbyist type is</h2>
-                <h1 class="type-name">${archetype.name.toUpperCase()}</h1>
-                <svg class="type-smiley" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="60" cy="60" r="58" fill="#F786E2"/>
-                    <path d="M40 54C43.5 47 53 47.5 56 54" stroke="#6451FA" stroke-width="4.5" stroke-linecap="round"/>
-                    <path d="M64 54C67.5 47 77 47.5 80 54" stroke="#6451FA" stroke-width="4.5" stroke-linecap="round"/>
-                    <path d="M55 68C57 74 63 74 65 68" stroke="#6451FA" stroke-width="4.5" stroke-linecap="round"/>
-                </svg>
+                <h1 class="type-name">${formatHobbyNameWithSmiley(archetype.name)}</h1>
             </div>
             <p class="type-description">${archetype.description}</p>
             <div class="type-traits simple-pills-container">
