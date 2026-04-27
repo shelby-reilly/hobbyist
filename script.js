@@ -952,15 +952,7 @@ function formatHobbyNameWithSmiley(name) {
         <path d="M55 70C57 77 63 77 65 70" stroke="#2D3748" stroke-width="4.5" stroke-linecap="round"/>
     </svg></span>`;
 
-    // Check if name contains O
-    if (upperName.includes('O')) {
-        // Put smiley inside the O (O stays visible, smiley overlays in center)
-        const firstOIndex = upperName.indexOf('O');
-        return upperName.substring(0, firstOIndex) + '<span class="o-with-smiley">O' + smileyInO + '</span>' + upperName.substring(firstOIndex + 1);
-    } else {
-        // Add smiley after the name
-        return upperName + ' ' + smileyAfter;
-    }
+    return upperName + ' ' + smileyAfter;
 }
 
 function showHobbyPage() {
